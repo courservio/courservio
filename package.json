@@ -1,5 +1,17 @@
 {
     "private": true,
+    "name": "courservio",
+    "description": "The free course management software.",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/courservio/courservio.git"
+    },
+    "author": "Holger Schmermbeck",
+    "license": "EUPL-1.2-or-later",
+    "bugs": {
+        "url": "https://github.com/courservio/courservio/issues"
+    },
+    "homepage": "https://courservio.de",
     "scripts": {
         "dev": "vite",
         "build": "vite build"
