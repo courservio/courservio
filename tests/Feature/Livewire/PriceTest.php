@@ -3,7 +3,6 @@
 use App\Http\Livewire\Price;
 use App\Models\User;
 use Database\Seeders\PermissionSeeder;
-
 use function Pest\Laravel\actingAs;
 
 beforeEach(function () {

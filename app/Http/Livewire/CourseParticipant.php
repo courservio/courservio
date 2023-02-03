@@ -1,25 +1,25 @@
 <?php
 
 /**
-* Copyright 2023 courservio.de
-*
-* Licensed under the EUPL, Version 1.2 or – as soon they
-* will be approved by the European Commission - subsequent
-* versions of the EUPL (the "Licence");
-* You may not use this work except in compliance with the
-* Licence.
-* You may obtain a copy of the Licence at:
-*
-* https://joinup.ec.europa.eu/software/page/eupl
-*
-* Unless required by applicable law or agreed to in
-* writing, software distributed under the Licence is
-* distributed on an "AS IS" basis,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
-* express or implied.
-* See the Licence for the specific language governing
-* permissions and limitations under the Licence.
-*/
+ * Copyright 2023 courservio.de
+ *
+ * Licensed under the EUPL, Version 1.2 or – as soon they
+ * will be approved by the European Commission - subsequent
+ * versions of the EUPL (the "Licence");
+ * You may not use this work except in compliance with the
+ * Licence.
+ * You may obtain a copy of the Licence at:
+ *
+ * https://joinup.ec.europa.eu/software/page/eupl
+ *
+ * Unless required by applicable law or agreed to in
+ * writing, software distributed under the Licence is
+ * distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ * express or implied.
+ * See the Licence for the specific language governing
+ * permissions and limitations under the Licence.
+ */
 
 namespace App\Http\Livewire;
 
@@ -122,8 +122,7 @@ class CourseParticipant extends Component
     {
         $query = Participant::query()
             ->where('course_id', $this->courseId)
-            ->orderBy('company')
-        ;
+            ->orderBy('company');
 
         return $this->applySorting($query);
     }
@@ -258,11 +257,11 @@ class CourseParticipant extends Component
         $batch = Bus::batch([
             $jobBag,
         ])->then(function (Batch $batch) { // success
-            //cleanup after 3 hour
+        //cleanup after 3 hour
             DeleteCerts::dispatch($batch->id)
                 ->delay(now()->addHours(3));
         })->catch(function (Batch $batch, Throwable $e) { // failed
-            // cleanup directly
+        // cleanup directly
             DeleteCerts::dispatch($batch->id)
                 ->delay(now()->addSeconds(30));
         })->dispatch();
@@ -319,7 +318,7 @@ class CourseParticipant extends Component
 
         $this->showWaitModal = false;
 
-        $file = 'certTmp/' . $this->batchId . '.pdf';
+        $file = 'certTmp/'.$this->batchId.'.pdf';
 
         if (! Storage::exists($file)) {
             $this->creationFailed = true;
@@ -335,9 +334,9 @@ class CourseParticipant extends Component
         $this->useCachedRows();
 
         $this->showDownloadModal = false;
-        $file = 'certTmp/' . $this->batchId . '.pdf';
+        $file = 'certTmp/'.$this->batchId.'.pdf';
 
-        return Storage::download($file, 'cert-' . $this->course . '.pdf', ['Content-Type: application/pdf']);
+        return Storage::download($file, 'cert-'.$this->course.'.pdf', ['Content-Type: application/pdf']);
     }
 
     /**

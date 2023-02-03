@@ -1,25 +1,25 @@
 <?php
 
 /**
-* Copyright 2023 courservio.de
-*
-* Licensed under the EUPL, Version 1.2 or – as soon they
-* will be approved by the European Commission - subsequent
-* versions of the EUPL (the "Licence");
-* You may not use this work except in compliance with the
-* Licence.
-* You may obtain a copy of the Licence at:
-*
-* https://joinup.ec.europa.eu/software/page/eupl
-*
-* Unless required by applicable law or agreed to in
-* writing, software distributed under the Licence is
-* distributed on an "AS IS" basis,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
-* express or implied.
-* See the Licence for the specific language governing
-* permissions and limitations under the Licence.
-*/
+ * Copyright 2023 courservio.de
+ *
+ * Licensed under the EUPL, Version 1.2 or – as soon they
+ * will be approved by the European Commission - subsequent
+ * versions of the EUPL (the "Licence");
+ * You may not use this work except in compliance with the
+ * Licence.
+ * You may obtain a copy of the Licence at:
+ *
+ * https://joinup.ec.europa.eu/software/page/eupl
+ *
+ * Unless required by applicable law or agreed to in
+ * writing, software distributed under the Licence is
+ * distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ * express or implied.
+ * See the Licence for the specific language governing
+ * permissions and limitations under the Licence.
+ */
 
 namespace App\Http;
 
@@ -31,7 +31,6 @@ class Kernel extends HttpKernel
      * The application's global HTTP middleware stack.
      *
      * These middleware are run during every request to your application.
-     *
      */
     protected $middleware = [
         // \App\Http\Middleware\TrustHosts::class,
@@ -45,7 +44,6 @@ class Kernel extends HttpKernel
 
     /**
      * The application's route middleware groups.
-     *
      */
     protected $middlewareGroups = [
         'web' => [
@@ -71,7 +69,6 @@ class Kernel extends HttpKernel
      * The application's route middleware.
      *
      * These middleware may be assigned to groups or used individually.
-     *
      */
     protected $routeMiddleware = [
         'auth' => \App\Http\Middleware\Authenticate::class,
