@@ -26,7 +26,7 @@ namespace App\Events;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class GeodataUpdated
+class GeoDataUpdated
 {
     use Dispatchable;
     use SerializesModels;

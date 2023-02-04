@@ -24,7 +24,6 @@
 namespace App\Listeners;
 
 use App\Classes\CsvImportClass;
-use App\Events\GeodataUpdated;
 use App\Models\Location;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
@@ -47,20 +46,20 @@ class ImportGeoLocations implements ShouldQueue
 
     /**
      * Handle the event.
-     *
-     * @param  GeodataUpdated  $event
-     * @return void
-     *
-     * @throws Exception
-     * @throws InvalidArgument
      */
-    public function handle(GeodataUpdated $event): void
+    public function handle(): bool
     {
         $csv = new CsvImportClass();
-        $csv->setUrl(config('geodata.url'));
+        $csv->setUrl(config('geo-data.url'));
         $csv->setFile('locations.csv');
 
-        $records = $csv->getContent();
+        try {
+            $records = $csv->getContent();
+        } catch (InvalidArgument|Exception $e) {
+            report($e);
+
+            return false;
+        }
 
         $data = [];
 
@@ -72,12 +71,13 @@ class ImportGeoLocations implements ShouldQueue
         }
 
         $array_chunk = array_chunk($data, 500); // chunk to 500 each, cause of mysql / mariadb limits
-        $insert = [];
 
         Location::truncate();
 
         foreach ($array_chunk as $chunk) {
-            $insert[] = Location::insert($chunk);
+            Location::insert($chunk);
         }
+
+        return true;
     }
 }
