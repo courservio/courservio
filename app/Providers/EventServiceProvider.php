@@ -27,7 +27,7 @@ use App\Events\CourseBooked;
 use App\Events\CourseCancelled;
 use App\Events\CourseCreated;
 use App\Events\CourseRegisterRequired;
-use App\Events\GeodataUpdated;
+use App\Events\GeoDataUpdated;
 use App\Events\QsehCourseUpdated;
 use App\Events\UserCreated;
 use App\Events\UserForgotPassword;
@@ -82,7 +82,7 @@ class EventServiceProvider extends ServiceProvider
             SendParticipantBookingConfirmation::class,
         ],
 
-        GeodataUpdated::class => [
+        GeoDataUpdated::class => [
             ImportGeoCoordinates::class,
             ImportGeoLocations::class,
         ],
@@ -93,7 +93,7 @@ class EventServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         User::observe(UserObserver::class);
     }

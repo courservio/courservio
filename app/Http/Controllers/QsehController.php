@@ -32,15 +32,16 @@ class QsehController extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  Request  $request
+     * @param  QsehService  $qsehService
+     * @return void
      */
-    public function __invoke(Request $request, QsehService $qsehService)
+    public function __invoke(Request $request, QsehService $qsehService): void
     {
         $course = Course::find(3);
 
-        $respone = $qsehService->connect($course, 'update');
+        $response = $qsehService->connect($course, 'update');
 
-        dd($respone['response']);
+        dd($response['response']);
     }
 }

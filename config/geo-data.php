@@ -11,5 +11,5 @@ return [
     |
     */
 
-    'url' => env('GEODATA_URL', 'https://raw.githubusercontent.com/courservio/geodata/main/'),
+    'url' => env('GEO-DATA_URL', 'https://raw.githubusercontent.com/courservio/geodata/main/'),
 ];
