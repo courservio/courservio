@@ -23,7 +23,7 @@
 
 namespace App\Http\Livewire;
 
-use App\Events\GeodataUpdated;
+use App\Events\GeoDataUpdated;
 use App\Models\User;
 use Artisan;
 use Livewire\Component;
@@ -33,8 +33,6 @@ class Setup extends Component
     public string $name = '';
 
     public string $email = '';
-
-    public bool $userAdded = false;
 
     protected array $rules = [
         'name' => 'required',
@@ -47,11 +45,11 @@ class Setup extends Component
 
         abort_unless($this->email === config('app.owner'), 401);
 
-        // check if a user already exists (again)
-        $user = User::first();
+        // Check if a user already exists (again)
+        $user = (new User)->first();
         abort_if(isset($user), 403);
 
-        // reset and seed database
+        // Reset and seed database
         $exitCode = Artisan::call('migrate:fresh', [
             '--seed' => true,
             '--force' => true,
@@ -59,8 +57,8 @@ class Setup extends Component
 
         abort_unless(! $exitCode, 503);
 
-        // create user
-        $user = User::create([
+        // Create user
+        $user = (new User)->create([
             'name' => $this->name,
             'email' => $this->email,
             'password' => '',
@@ -69,7 +67,7 @@ class Setup extends Component
 
         $user->attachRole('admin');
 
-        event(new GeodataUpdated());
+        event(new GeoDataUpdated());
 
         $this->redirect(route('login'));
     }
@@ -78,8 +76,8 @@ class Setup extends Component
     {
         abort_unless(config('app.owner'), 404);
 
-        // check if a user already exists
-        $user = User::first();
+        // Check if a user already exists
+        $user = (new User)->first();
         abort_if(isset($user), 404);
 
         return view('livewire.setup')
