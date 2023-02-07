@@ -29,6 +29,7 @@
         "mcamara/laravel-localization": "1.7.0",
         "nekhbet/laravel-gettext": "dev-master",
         "phpoffice/phpword": "1.0.0",
+        "prevplan/laravel-heartbeat-status": "1.0.0",
         "santigarcor/laratrust": "7.1.0",
         "setasign/fpdf": "1.8.5",
         "setasign/fpdi-protection": "2.0.3",
