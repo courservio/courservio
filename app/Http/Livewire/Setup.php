@@ -61,8 +61,6 @@ class Setup extends Component
         $keyPairs = [];
         if ($this->update_type === 'release') {
             $keyPairs = [
-                'SELF_UPDATER_REPO_VENDOR' => 'courservio',
-                'SELF_UPDATER_REPO_NAME' => 'courservio',
                 'SELF_UPDATER_AUTO_UPDATE' => 'true', // It has to be a string and no boolean for the .env file
                 'SELF_UPDATER_VERSION_INSTALLED' => 'v0.0.0',
                 'SELF_UPDATER_USE_BRANCH' => '',
@@ -72,8 +70,6 @@ class Setup extends Component
 
         if ($this->update_type === 'commit') {
             $keyPairs = [
-                'SELF_UPDATER_REPO_VENDOR' => 'courservio',
-                'SELF_UPDATER_REPO_NAME' => 'courservio',
                 'SELF_UPDATER_AUTO_UPDATE' => 'true', // It has to be a string and no boolean for the .env file
                 'SELF_UPDATER_VERSION_INSTALLED' => '0000-00-00T00:00:00Z',
                 'SELF_UPDATER_USE_BRANCH' => 'main',
