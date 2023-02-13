@@ -1,5 +1,23 @@
 <?php
 
+use App\Http\Livewire\Auth\Login;
+use App\Http\Livewire\Booking;
+use App\Http\Livewire\BookingOverview;
+use App\Http\Livewire\CertTemplate;
+use App\Http\Livewire\Course;
+use App\Http\Livewire\CourseParticipant;
+use App\Http\Livewire\CourseType;
+use App\Http\Livewire\Home;
+use App\Http\Livewire\LocationSearch;
+use App\Http\Livewire\Participant;
+use App\Http\Livewire\ParticipantDetails;
+use App\Http\Livewire\PasswordReset;
+use App\Http\Livewire\Position;
+use App\Http\Livewire\Price;
+use App\Http\Livewire\Role;
+use App\Http\Livewire\Setup;
+use App\Http\Livewire\Team;
+use App\Http\Livewire\User;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Route;
 
@@ -22,64 +40,64 @@ Route::group(
     function () {
         Route::post('livewire/message/{name}', '\Livewire\Controllers\HttpConnectionHandler');
 
-        Route::get('login', \App\Http\Livewire\Auth\Login::class)
+        Route::get('login', Login::class)
             ->middleware('guest')
             ->name('login');
 
-        Route::get('home', \App\Http\Livewire\Home::class)
+        Route::get('home', Home::class)
             ->name('home');
 
-        Route::get('teams', \App\Http\Livewire\Team::class)
+        Route::get('teams', Team::class)
             ->name('teams');
 
-        Route::get('user', \App\Http\Livewire\User::class)
+        Route::get('user', User::class)
             ->name('user');
 
-        Route::get('coursetype', \App\Http\Livewire\CourseType::class)
+        Route::get('coursetype', CourseType::class)
             ->name('coursetype');
 
-        Route::get('course', \App\Http\Livewire\Course::class)
+        Route::get('course', Course::class)
             ->name('course');
 
-        Route::get('participant/{course}', \App\Http\Livewire\CourseParticipant::class)
+        Route::get('participant/{course}', CourseParticipant::class)
             ->name('participant.course');
 
-        Route::get('participant/{participant}/details', \App\Http\Livewire\ParticipantDetails::class)
+        Route::get('participant/{participant}/details', ParticipantDetails::class)
             ->name('participant.details');
 
-        Route::get('participant', \App\Http\Livewire\Participant::class)
+        Route::get('participant', Participant::class)
             ->name('participant');
 
-        Route::get('roles', \App\Http\Livewire\Role::class)
+        Route::get('roles', Role::class)
             ->name('roles');
 
-        Route::get('prices', \App\Http\Livewire\Price::class)
+        Route::get('prices', Price::class)
             ->name('prices');
 
-        Route::get('positions', \App\Http\Livewire\Position::class)
+        Route::get('positions', Position::class)
             ->name('positions');
 
-        Route::get('cert-templates', \App\Http\Livewire\CertTemplate::class)
+        Route::get('cert-templates', CertTemplate::class)
             ->name('certTemplates');
 
-        Route::get('password/reset/{hashedId}', \App\Http\Livewire\PasswordReset::class)
+        Route::get('password/reset/{hashedId}', PasswordReset::class)
             ->middleware('signed')
             ->name('password.reset');
 
-        Route::get('course/{slug}', \App\Http\Livewire\LocationSearch::class);
+        Route::get('course/{slug}', LocationSearch::class);
 
-        Route::get('course/{slug}/{location}', \App\Http\Livewire\BookingOverview::class)
+        Route::get('course/{slug}/{location}', BookingOverview::class)
             ->name('booking.overview');
 
-        Route::get('course/{slug}/{location}/{location2}', \App\Http\Livewire\BookingOverview::class)
+        Route::get('course/{slug}/{location}/{location2}', BookingOverview::class)
             ->name('booking.coordinates');
 
-        Route::get('booking/{course}/{price}', \App\Http\Livewire\Booking::class)
+        Route::get('booking/{course}/{price}', Booking::class)
             ->name('booking');
     }
 );
 
-Route::get('setup', \App\Http\Livewire\Setup::class);
+Route::get('setup', Setup::class);
 
 if (config('services.indexnow.key')) {
     Route::get('{key}.txt', function (Request $request, $key) {

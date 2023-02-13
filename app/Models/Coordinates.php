@@ -23,8 +23,11 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 /**
  * App\Models\Coordinates
@@ -36,23 +39,23 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $state
  * @property string $lat
  * @property string $lon
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
  *
- * @method static \Illuminate\Database\Eloquent\Builder|Coordinates newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Coordinates newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Coordinates query()
- * @method static \Illuminate\Database\Eloquent\Builder|Coordinates whereCountryCode($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Coordinates whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Coordinates whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Coordinates whereLat($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Coordinates whereLocation($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Coordinates whereLon($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Coordinates whereState($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Coordinates whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Coordinates whereZipcode($value)
+ * @method static Builder|Coordinates newModelQuery()
+ * @method static Builder|Coordinates newQuery()
+ * @method static Builder|Coordinates query()
+ * @method static Builder|Coordinates whereCountryCode($value)
+ * @method static Builder|Coordinates whereCreatedAt($value)
+ * @method static Builder|Coordinates whereId($value)
+ * @method static Builder|Coordinates whereLat($value)
+ * @method static Builder|Coordinates whereLocation($value)
+ * @method static Builder|Coordinates whereLon($value)
+ * @method static Builder|Coordinates whereState($value)
+ * @method static Builder|Coordinates whereUpdatedAt($value)
+ * @method static Builder|Coordinates whereZipcode($value)
  *
- * @mixin \Eloquent
+ * @mixin Eloquent
  */
 class Coordinates extends Model
 {

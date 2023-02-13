@@ -1,5 +1,8 @@
 <?php
 
+use Nekhbet\LaravelGettext\Adapters\LaravelAdapter;
+use Nekhbet\LaravelGettext\Storages\SessionStorage;
+
 return [
 
     /**
@@ -125,7 +128,7 @@ return [
     /**
      * The adapter used to sync the laravel built-in locale
      */
-    'adapter' => \Nekhbet\LaravelGettext\Adapters\LaravelAdapter::class,
+    'adapter' => LaravelAdapter::class,
 
     /**
      * Where to store the current locale/domain
@@ -135,7 +138,7 @@ return [
      *
      * @see \Nekhbet\LaravelGettext\Storages\Storage
      */
-    'storage' => \Nekhbet\LaravelGettext\Storages\SessionStorage::class,
+    'storage' => SessionStorage::class,
 
     /**
      * Use custom locale that is not supported by the system

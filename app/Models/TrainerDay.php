@@ -23,8 +23,11 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 /**
  * App\Models\TrainerDay
@@ -35,22 +38,22 @@ use Illuminate\Database\Eloquent\Model;
  * @property int|null $position
  * @property int $order
  * @property string|null $option
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
  *
- * @method static \Illuminate\Database\Eloquent\Builder|TrainerDay newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|TrainerDay newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|TrainerDay query()
- * @method static \Illuminate\Database\Eloquent\Builder|TrainerDay whereCourseDayId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|TrainerDay whereCourseId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|TrainerDay whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|TrainerDay whereOption($value)
- * @method static \Illuminate\Database\Eloquent\Builder|TrainerDay whereOrder($value)
- * @method static \Illuminate\Database\Eloquent\Builder|TrainerDay wherePosition($value)
- * @method static \Illuminate\Database\Eloquent\Builder|TrainerDay whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|TrainerDay whereUserId($value)
+ * @method static Builder|TrainerDay newModelQuery()
+ * @method static Builder|TrainerDay newQuery()
+ * @method static Builder|TrainerDay query()
+ * @method static Builder|TrainerDay whereCourseDayId($value)
+ * @method static Builder|TrainerDay whereCourseId($value)
+ * @method static Builder|TrainerDay whereCreatedAt($value)
+ * @method static Builder|TrainerDay whereOption($value)
+ * @method static Builder|TrainerDay whereOrder($value)
+ * @method static Builder|TrainerDay wherePosition($value)
+ * @method static Builder|TrainerDay whereUpdatedAt($value)
+ * @method static Builder|TrainerDay whereUserId($value)
  *
- * @mixin \Eloquent
+ * @mixin Eloquent
  */
 class TrainerDay extends Model
 {

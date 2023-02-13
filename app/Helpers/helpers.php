@@ -21,14 +21,13 @@
  * permissions and limitations under the Licence.
  */
 
+use Illuminate\Support\Facades\Auth;
+
 /**
  * Format an amount to the given currency
  *
  * @return response()
  */
-
-use Illuminate\Support\Facades\Auth;
-
 if (! function_exists('formatCurrency')) {
     function formatCurrency($amount, $currency): bool|string
     {
@@ -63,7 +62,9 @@ if (! function_exists('canonical_url')) {
     }
 }
 
-// function to get an array of teams to a permission
+/**
+ * function to get an array of teams to a permission
+ */
 if (! function_exists('authorizedTeams')) {
     function authorizedTeams($permission): array
     {
@@ -80,8 +81,53 @@ if (! function_exists('authorizedTeams')) {
     }
 }
 
-// function to correct geolocations before importing
+/**
+ * save an array to the .env config file
+ */
+if (! function_exists('saveArrayToEnv')) {
+    /**
+     * @param  array  $keyPairs
+     * @return void
+     */
+    function saveArrayToEnv(array $keyPairs): void
+    {
+        $envFile = app()->environmentFilePath();
+        $newEnv = file_get_contents($envFile);
+
+        $newlyInserted = false;
+
+        foreach ($keyPairs as $key => $value) {
+            // Make sure key is uppercase (can be left out)
+            $key = Str::upper($key);
+
+            if (str_contains($newEnv, "$key=")) {
+                // If key exists, replace value
+                $newEnv = preg_replace("/$key=(.*)\n/", "$key=$value\n", $newEnv);
+            } else {
+                // Check if spacing is correct
+                if (! str_ends_with($newEnv, "\n\n") && ! $newlyInserted) {
+                    $newEnv .= str_ends_with($newEnv, "\n") ? "\n" : "\n\n";
+                    $newlyInserted = true;
+                }
+                // Append new
+                $newEnv .= "$key=$value\n";
+            }
+        }
+
+        $fp = fopen($envFile, 'w');
+        fwrite($fp, $newEnv);
+        fclose($fp);
+    }
+}
+
+/**
+ * function to correct geolocations before importing
+ */
 if (! function_exists('correctGeolocation')) {
+    /**
+     * @param $location
+     * @return mixed
+     */
     function correctGeolocation($location): mixed
     {
         if (strpos($location, ',')) { // remove addons like 'Stadt'

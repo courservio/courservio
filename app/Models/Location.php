@@ -23,6 +23,8 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -33,14 +35,14 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $location
  * @property string $state
  *
- * @method static \Illuminate\Database\Eloquent\Builder|Location newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Location newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Location query()
- * @method static \Illuminate\Database\Eloquent\Builder|Location whereLocation($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Location whereState($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Location whereZipcode($value)
+ * @method static Builder|Location newModelQuery()
+ * @method static Builder|Location newQuery()
+ * @method static Builder|Location query()
+ * @method static Builder|Location whereLocation($value)
+ * @method static Builder|Location whereState($value)
+ * @method static Builder|Location whereZipcode($value)
  *
- * @mixin \Eloquent
+ * @mixin Eloquent
  */
 class Location extends Model
 {

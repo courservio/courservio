@@ -23,11 +23,12 @@
 
 namespace App\Providers;
 
+use Closure;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * @method where(\Closure $param)
+ * @method where(Closure $param)
  */
 class AppServiceProvider extends ServiceProvider
 {
