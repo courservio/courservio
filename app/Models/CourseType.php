@@ -23,8 +23,13 @@
 
 namespace App\Models;
 
+use Database\Factories\CourseTypeFactory;
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Carbon;
 
 /**
  * App\Models\CourseType
@@ -40,35 +45,35 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $units_per_day
  * @property int $breaks
  * @property int $seats
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\CertTemplate|null $certTemplate
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read CertTemplate|null $certTemplate
  *
- * @method static \Database\Factories\CourseTypeFactory factory(...$parameters)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType query()
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType whereBreaks($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType whereCategory($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType whereCertTemplateId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType whereIframeUrl($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType whereSeats($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType whereSlug($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType whereUnits($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType whereUnitsPerDay($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseType whereWsdlId($value)
+ * @method static CourseTypeFactory factory(...$parameters)
+ * @method static Builder|CourseType newModelQuery()
+ * @method static Builder|CourseType newQuery()
+ * @method static Builder|CourseType query()
+ * @method static Builder|CourseType whereBreaks($value)
+ * @method static Builder|CourseType whereCategory($value)
+ * @method static Builder|CourseType whereCertTemplateId($value)
+ * @method static Builder|CourseType whereCreatedAt($value)
+ * @method static Builder|CourseType whereId($value)
+ * @method static Builder|CourseType whereIframeUrl($value)
+ * @method static Builder|CourseType whereName($value)
+ * @method static Builder|CourseType whereSeats($value)
+ * @method static Builder|CourseType whereSlug($value)
+ * @method static Builder|CourseType whereUnits($value)
+ * @method static Builder|CourseType whereUnitsPerDay($value)
+ * @method static Builder|CourseType whereUpdatedAt($value)
+ * @method static Builder|CourseType whereWsdlId($value)
  *
- * @mixin \Eloquent
+ * @mixin Eloquent
  */
 class CourseType extends Model
 {
     use HasFactory;
 
-    public function certTemplate(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function certTemplate(): BelongsTo
     {
         return $this->belongsTo(CertTemplate::class);
     }

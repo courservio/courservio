@@ -23,8 +23,11 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 /**
  * App\Models\ContactPerson
@@ -39,26 +42,26 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $location
  * @property string|null $phone
  * @property string|null $email
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
  *
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson query()
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson whereCompany($value)
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson whereFirstname($value)
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson whereLastname($value)
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson whereLocation($value)
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson wherePhone($value)
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson whereStreet($value)
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson whereTeamId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|ContactPerson whereZipcode($value)
+ * @method static Builder|ContactPerson newModelQuery()
+ * @method static Builder|ContactPerson newQuery()
+ * @method static Builder|ContactPerson query()
+ * @method static Builder|ContactPerson whereCompany($value)
+ * @method static Builder|ContactPerson whereCreatedAt($value)
+ * @method static Builder|ContactPerson whereEmail($value)
+ * @method static Builder|ContactPerson whereFirstname($value)
+ * @method static Builder|ContactPerson whereId($value)
+ * @method static Builder|ContactPerson whereLastname($value)
+ * @method static Builder|ContactPerson whereLocation($value)
+ * @method static Builder|ContactPerson wherePhone($value)
+ * @method static Builder|ContactPerson whereStreet($value)
+ * @method static Builder|ContactPerson whereTeamId($value)
+ * @method static Builder|ContactPerson whereUpdatedAt($value)
+ * @method static Builder|ContactPerson whereZipcode($value)
  *
- * @mixin \Eloquent
+ * @mixin Eloquent
  */
 class ContactPerson extends Model
 {

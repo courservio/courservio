@@ -19,6 +19,7 @@
 | permissions and limitations under the Licence.
 --}}
 
+@php use App\Models\Price;use Carbon\Carbon; @endphp
 <div>
     <div>
         <div class="mx-auto max-w-7xl py-4 px-4 sm:py-6 sm:px-6 lg:px-8">
@@ -34,11 +35,24 @@
         <div class="relative flex items-start justify-center space-x-2">
             @foreach($perimeter_locations as $location)
                 <div class="flex h-5 items-center">
-                    <input id="{{ $location->location }}" wire:model="searchLocations.{{ $location->location }}" value="{{ $location->location }}" aria-describedby="{{ $location->location }}-description" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <input id="{{ $location->location }}" wire:model="searchLocations.{{ $location->location }}"
+                           value="{{ $location->location }}" aria-describedby="{{ $location->location }}-description"
+                           type="checkbox"
+                           class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                 </div>
                 <div class="ml-3 text-sm">
-                    <label for="{{ $location->location }}" class="font-medium text-gray-700">{{ $location->location }}</label>
-                    <span id="{{ $location->location }}-description" class="text-gray-500"><span class="sr-only">{{ $location->location }} </span><svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg> {{ round($location->distance) }} km</span>
+                    <label for="{{ $location->location }}"
+                           class="font-medium text-gray-700">{{ $location->location }}</label>
+                    <span id="{{ $location->location }}-description" class="text-gray-500"><span
+                                class="sr-only">{{ $location->location }} </span><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                      class="inline-block h-5 w-5"
+                                                                                      fill="none" viewBox="0 0 24 24"
+                                                                                      stroke="currentColor"
+                                                                                      stroke-width="2"><path
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg> {{ round($location->distance) }} km</span>
                 </div>
             @endforeach
         </div>
@@ -49,7 +63,8 @@
             <ul role="list" class="divide-y divide-gray-200">
                 @foreach($courses as $course)
                     <li>
-                        <a @if(($course->seats - $course->participants_count) > 0)wire:click="showPrice({{ $course->id }})"@endif class="block hover:bg-gray-50">
+                        <a @if(($course->seats - $course->participants_count) > 0)wire:click="showPrice({{ $course->id }})"
+                           @endif class="block hover:bg-gray-50">
                             <div class="px-4 py-4 sm:px-6">
                                 <div class="flex items-center justify-between">
                                     <p class="truncate text-sm font-medium text-indigo-600">{{ $courses[0]->type->name }}</p>
@@ -67,19 +82,28 @@
                                     <div class="sm:flex">
                                         <p class="flex items-center text-sm text-gray-500">
                                             <!-- Heroicon name: solid/location-marker -->
-                                            <svg class="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                            <svg class="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
+                                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                 fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                                      clip-rule="evenodd"/>
                                             </svg>
                                             {{ $course->street }}, {{ $course->zipcode }} {{ $course->location }}
                                         </p>
                                     </div>
                                     <div class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0">
                                         <!-- Heroicon name: solid/calendar -->
-                                        <svg class="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                                        <svg class="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                             aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                                  clip-rule="evenodd"/>
                                         </svg>
                                         <p>
-                                            <time datetime="{{ \Carbon\Carbon::parse($course->start)->isoFormat('YYYY-MM-DD') }}">{{ \Carbon\Carbon::parse($course->start)->isoFormat('DD.MM.YYYY, dd.') }} {{ \Carbon\Carbon::parse($course->start)->isoFormat('HH:mm') }} - {{ \Carbon\Carbon::parse($course->end)->isoFormat('HH:mm') }}</time>
+                                            <time datetime="{{ Carbon::parse($course->start)->isoFormat('YYYY-MM-DD') }}">{{ Carbon::parse($course->start)->isoFormat('DD.MM.YYYY, dd.') }} {{ Carbon::parse($course->start)->isoFormat('HH:mm') }}
+                                                - {{ Carbon::parse($course->end)->isoFormat('HH:mm') }}</time>
                                         </p>
                                     </div>
                                 </div>
@@ -93,7 +117,7 @@
         <p class="text-center text-gray-500">{{ _i('aren\'t offered at the moment... Please try again with another location!') }}</p>
     @endif
 
-    <x-booking.footer />
+    <x-booking.footer/>
 
     <x-modal.dialog wire:model.defer="showPriceModal">
         <x-slot name="title"></x-slot>
@@ -108,13 +132,14 @@
                             <div class="flex-1">
                                 <h3 class="text-xl font-semibold text-gray-900">{{ $price->title }}</h3>
                                 <p class="mt-4 flex items-baseline text-gray-900">
-                                    <span class="text-3xl font-extrabold tracking-tight">{{ \App\Models\Price::SIGN[$price->currency] }} {{ $price->amount_gross }}</span>
+                                    <span class="text-3xl font-extrabold tracking-tight">{{ Price::SIGN[$price->currency] }} {{ $price->amount_gross }}</span>
                                     <span class="ml-1 text-xl font-semibold">/ {{ _i('Person') }}</span>
                                 </p>
                                 <p class="mt-6 text-gray-500">{{ $price->description }}</p>
                             </div>
 
-                            <button wire:click="selectCourse({{ $actual->id }}, {{ $price->id }})" class="mt-8 block w-full rounded-md border border-transparent bg-indigo-500 py-3 px-6 text-center font-medium text-white hover:bg-indigo-600">{{ _i('select') }}</button>
+                            <button wire:click="selectCourse({{ $actual->id }}, {{ $price->id }})"
+                                    class="mt-8 block w-full rounded-md border border-transparent bg-indigo-500 py-3 px-6 text-center font-medium text-white hover:bg-indigo-600">{{ _i('select') }}</button>
                         </div>
 
                     @endforeach

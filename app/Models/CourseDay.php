@@ -23,8 +23,13 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Carbon;
 
 /**
  * App\Models\CourseDay
@@ -38,33 +43,33 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $endReal
  * @property int $unitsPlan
  * @property int $unitsReal
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\TrainerDay[] $trainer
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read Collection|TrainerDay[] $trainer
  * @property-read int|null $trainer_count
  *
- * @method static \Illuminate\Database\Eloquent\Builder|CourseDay newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|CourseDay newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|CourseDay query()
- * @method static \Illuminate\Database\Eloquent\Builder|CourseDay whereCourseId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseDay whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseDay whereDate($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseDay whereEndPlan($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseDay whereEndReal($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseDay whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseDay whereStartPlan($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseDay whereStartReal($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseDay whereUnitsPlan($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseDay whereUnitsReal($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CourseDay whereUpdatedAt($value)
+ * @method static Builder|CourseDay newModelQuery()
+ * @method static Builder|CourseDay newQuery()
+ * @method static Builder|CourseDay query()
+ * @method static Builder|CourseDay whereCourseId($value)
+ * @method static Builder|CourseDay whereCreatedAt($value)
+ * @method static Builder|CourseDay whereDate($value)
+ * @method static Builder|CourseDay whereEndPlan($value)
+ * @method static Builder|CourseDay whereEndReal($value)
+ * @method static Builder|CourseDay whereId($value)
+ * @method static Builder|CourseDay whereStartPlan($value)
+ * @method static Builder|CourseDay whereStartReal($value)
+ * @method static Builder|CourseDay whereUnitsPlan($value)
+ * @method static Builder|CourseDay whereUnitsReal($value)
+ * @method static Builder|CourseDay whereUpdatedAt($value)
  *
- * @mixin \Eloquent
+ * @mixin Eloquent
  */
 class CourseDay extends Model
 {
     use HasFactory;
 
-    public function trainer(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function trainer(): HasMany
     {
         return $this->hasMany(TrainerDay::class, 'course_day_id');
     }

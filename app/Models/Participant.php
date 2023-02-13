@@ -23,8 +23,12 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Carbon;
 
 /**
  * App\Models\Participant
@@ -54,43 +58,43 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $payed
  * @property string|null $transaction_id
  * @property mixed|null $cancelled
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\ContactPerson|null $contactPerson
- * @property-read \App\Models\Course $course
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read ContactPerson|null $contactPerson
+ * @property-read Course $course
  *
- * @method static \Illuminate\Database\Eloquent\Builder|Participant newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Participant newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Participant query()
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereCancelled($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereCompany($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereContactId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereCourseId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereCurrency($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereDateOfBirth($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereEmailReminder($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereFirstname($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereLastname($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereLocation($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereParticipated($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant wherePayed($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant wherePayee($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant wherePayment($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant wherePhone($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant wherePriceGross($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant wherePriceId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant wherePriceNet($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereRating($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereStreet($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereTeamId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereTransactionId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Participant whereZipcode($value)
+ * @method static Builder|Participant newModelQuery()
+ * @method static Builder|Participant newQuery()
+ * @method static Builder|Participant query()
+ * @method static Builder|Participant whereCancelled($value)
+ * @method static Builder|Participant whereCompany($value)
+ * @method static Builder|Participant whereContactId($value)
+ * @method static Builder|Participant whereCourseId($value)
+ * @method static Builder|Participant whereCreatedAt($value)
+ * @method static Builder|Participant whereCurrency($value)
+ * @method static Builder|Participant whereDateOfBirth($value)
+ * @method static Builder|Participant whereEmail($value)
+ * @method static Builder|Participant whereEmailReminder($value)
+ * @method static Builder|Participant whereFirstname($value)
+ * @method static Builder|Participant whereId($value)
+ * @method static Builder|Participant whereLastname($value)
+ * @method static Builder|Participant whereLocation($value)
+ * @method static Builder|Participant whereParticipated($value)
+ * @method static Builder|Participant wherePayed($value)
+ * @method static Builder|Participant wherePayee($value)
+ * @method static Builder|Participant wherePayment($value)
+ * @method static Builder|Participant wherePhone($value)
+ * @method static Builder|Participant wherePriceGross($value)
+ * @method static Builder|Participant wherePriceId($value)
+ * @method static Builder|Participant wherePriceNet($value)
+ * @method static Builder|Participant whereRating($value)
+ * @method static Builder|Participant whereStreet($value)
+ * @method static Builder|Participant whereTeamId($value)
+ * @method static Builder|Participant whereTransactionId($value)
+ * @method static Builder|Participant whereUpdatedAt($value)
+ * @method static Builder|Participant whereZipcode($value)
  *
- * @mixin \Eloquent
+ * @mixin Eloquent
  */
 class Participant extends Model
 {
@@ -125,12 +129,12 @@ class Participant extends Model
         'paypal' => 'fa-brands fa-paypal',
     ];
 
-    public function course(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function course(): BelongsTo
     {
         return $this->belongsTo(Course::class);
     }
 
-    public function contactPerson(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function contactPerson(): BelongsTo
     {
         return $this->belongsTo(ContactPerson::class, 'contact_id');
     }

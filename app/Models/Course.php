@@ -23,8 +23,16 @@
 
 namespace App\Models;
 
+use Database\Factories\CourseFactory;
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Carbon;
 
 /**
  * App\Models\Course
@@ -44,42 +52,42 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $seats
  * @property int|null $public_bookable
  * @property string|null $bag
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\CourseDay[] $days
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read Collection|CourseDay[] $days
  * @property-read int|null $days_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Participant[] $participants
+ * @property-read Collection|Participant[] $participants
  * @property-read int|null $participants_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Price[] $prices
+ * @property-read Collection|Price[] $prices
  * @property-read int|null $prices_count
- * @property-read \App\Models\Team|null $team
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\TrainerDay[] $trainer
+ * @property-read Team|null $team
+ * @property-read Collection|TrainerDay[] $trainer
  * @property-read int|null $trainer_count
- * @property-read \App\Models\CourseType $type
+ * @property-read CourseType $type
  *
- * @method static \Database\Factories\CourseFactory factory(...$parameters)
- * @method static \Illuminate\Database\Eloquent\Builder|Course newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Course newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Course query()
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereBag($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereCancelled($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereCourseTypeId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereEnd($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereInternalNumber($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereLocation($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course wherePublicBookable($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereRegistrationNumber($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereSeats($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereSeminarLocation($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereStart($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereStreet($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereTeamId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Course whereZipcode($value)
+ * @method static CourseFactory factory(...$parameters)
+ * @method static Builder|Course newModelQuery()
+ * @method static Builder|Course newQuery()
+ * @method static Builder|Course query()
+ * @method static Builder|Course whereBag($value)
+ * @method static Builder|Course whereCancelled($value)
+ * @method static Builder|Course whereCourseTypeId($value)
+ * @method static Builder|Course whereCreatedAt($value)
+ * @method static Builder|Course whereEnd($value)
+ * @method static Builder|Course whereId($value)
+ * @method static Builder|Course whereInternalNumber($value)
+ * @method static Builder|Course whereLocation($value)
+ * @method static Builder|Course wherePublicBookable($value)
+ * @method static Builder|Course whereRegistrationNumber($value)
+ * @method static Builder|Course whereSeats($value)
+ * @method static Builder|Course whereSeminarLocation($value)
+ * @method static Builder|Course whereStart($value)
+ * @method static Builder|Course whereStreet($value)
+ * @method static Builder|Course whereTeamId($value)
+ * @method static Builder|Course whereUpdatedAt($value)
+ * @method static Builder|Course whereZipcode($value)
  *
- * @mixin \Eloquent
+ * @mixin Eloquent
  */
 class Course extends Model
 {
@@ -90,32 +98,32 @@ class Course extends Model
         'end' => 'datetime:d.m.Y H:i',
     ];
 
-    public function type(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function type(): BelongsTo
     {
         return $this->belongsTo(CourseType::class, 'course_type_id');
     }
 
-    public function team(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function team(): BelongsTo
     {
         return $this->belongsTo(Team::class, 'team_id');
     }
 
-    public function prices(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    public function prices(): BelongsToMany
     {
         return $this->belongsToMany(Price::class);
     }
 
-    public function participants(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function participants(): HasMany
     {
         return $this->hasMany(Participant::class);
     }
 
-    public function days(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function days(): HasMany
     {
         return $this->hasMany(CourseDay::class, 'course_id');
     }
 
-    public function trainer(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function trainer(): HasMany
     {
         return $this->hasMany(TrainerDay::class, 'course_id');
     }

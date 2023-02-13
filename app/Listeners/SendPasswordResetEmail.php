@@ -25,6 +25,7 @@ namespace App\Listeners;
 
 use App\Events\UserForgotPassword;
 use App\Mail\PasswordReset;
+use Exception;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Mail;
@@ -49,7 +50,7 @@ class SendPasswordResetEmail implements ShouldQueue
      * @param  UserForgotPassword  $event
      * @return void
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function handle(UserForgotPassword $event)
     {

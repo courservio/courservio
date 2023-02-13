@@ -23,8 +23,15 @@
 
 namespace App\Models;
 
+use Database\Factories\PriceFactory;
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Carbon;
 
 /**
  * App\Models\Price
@@ -40,32 +47,32 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $payment
  * @property int|null $tax_rate
  * @property int $active
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\CertTemplate|null $certTemplate
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Course[] $courses
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read CertTemplate|null $certTemplate
+ * @property-read Collection|Course[] $courses
  * @property-read int|null $courses_count
- * @property-read \App\Models\Team|null $team
+ * @property-read Team|null $team
  *
- * @method static \Database\Factories\PriceFactory factory(...$parameters)
- * @method static \Illuminate\Database\Eloquent\Builder|Price newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Price newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Price query()
- * @method static \Illuminate\Database\Eloquent\Builder|Price whereActive($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Price whereAmountGross($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Price whereAmountNet($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Price whereCertTemplateId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Price whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Price whereCurrency($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Price whereDescription($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Price whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Price wherePayment($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Price whereTaxRate($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Price whereTeamId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Price whereTitle($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Price whereUpdatedAt($value)
+ * @method static PriceFactory factory(...$parameters)
+ * @method static Builder|Price newModelQuery()
+ * @method static Builder|Price newQuery()
+ * @method static Builder|Price query()
+ * @method static Builder|Price whereActive($value)
+ * @method static Builder|Price whereAmountGross($value)
+ * @method static Builder|Price whereAmountNet($value)
+ * @method static Builder|Price whereCertTemplateId($value)
+ * @method static Builder|Price whereCreatedAt($value)
+ * @method static Builder|Price whereCurrency($value)
+ * @method static Builder|Price whereDescription($value)
+ * @method static Builder|Price whereId($value)
+ * @method static Builder|Price wherePayment($value)
+ * @method static Builder|Price whereTaxRate($value)
+ * @method static Builder|Price whereTeamId($value)
+ * @method static Builder|Price whereTitle($value)
+ * @method static Builder|Price whereUpdatedAt($value)
  *
- * @mixin \Eloquent
+ * @mixin Eloquent
  */
 class Price extends Model
 {
@@ -87,17 +94,17 @@ class Price extends Model
         '19' => '19 %',
     ];
 
-    public function team(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function team(): BelongsTo
     {
         return $this->belongsTo(Team::class);
     }
 
-    public function courses(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function courses(): HasMany
     {
         return $this->hasMany(Course::class);
     }
 
-    public function certTemplate(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function certTemplate(): BelongsTo
     {
         return $this->belongsTo(CertTemplate::class);
     }

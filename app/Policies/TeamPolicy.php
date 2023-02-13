@@ -26,6 +26,7 @@ namespace App\Policies;
 use App\Models\Team;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
+use Illuminate\Auth\Access\Response;
 
 class TeamPolicy
 {
@@ -68,7 +69,7 @@ class TeamPolicy
      *
      * @param  User  $user
      * @param  Team  $team
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @return Response|bool
      */
 //    public function view(User $user, Team $team)
 //    {
@@ -107,7 +108,7 @@ class TeamPolicy
      *
      * @param  User  $user
      * @param  Team  $team
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @return Response|bool
      */
 //    public function delete(User $user, Team $team)
 //    {
@@ -119,7 +120,7 @@ class TeamPolicy
      *
      * @param  User  $user
      * @param  Team  $team
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @return Response|bool
      */
 //    public function restore(User $user, Team $team)
 //    {
@@ -131,7 +132,7 @@ class TeamPolicy
      *
      * @param  User  $user
      * @param  Team  $team
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @return Response|bool
      */
 //    public function forceDelete(User $user, Team $team)
 //    {

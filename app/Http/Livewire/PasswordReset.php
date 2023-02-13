@@ -25,6 +25,8 @@ namespace App\Http\Livewire;
 
 use App\Models\User;
 use Carbon\Carbon;
+use DateTimeImmutable;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Request;
 use Livewire\Component;
@@ -62,13 +64,13 @@ class PasswordReset extends Component
             return abort(Response::HTTP_FORBIDDEN, _i('The reset link has already been used.'));
         }
 
-        if (Carbon::instance(new \DateTimeImmutable($this->user->reset_valid_until))->isPast()) {
+        if (Carbon::instance(new DateTimeImmutable($this->user->reset_valid_until))->isPast()) {
             return abort(Response::HTTP_FORBIDDEN, _i('The reset link has expired.'));
         }
     }
 
     /**
-     * @return \Illuminate\Http\RedirectResponse
+     * @return RedirectResponse
      */
     public function resetPassword()
     {
