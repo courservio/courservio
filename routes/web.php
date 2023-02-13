@@ -99,38 +99,6 @@ Route::group(
 
 Route::get('setup', Setup::class);
 
-Route::get('/env', function () {
-    $keyPairs = [
-        'SELF_UPDATER_VERSION_INSTALLED' => 'v0.3.1',
-        'SELF_UPDATER_USE_BRANCH' => '',
-        'PAYMENT_METHODS' => '"cash,card,accountingForm,paypal"',
-    ];
-
-    saveArrayToEnv($keyPairs);
-});
-
-Route::get('/update', function (Codedge\Updater\UpdaterManager $updater) {
-    dd($updater->source()->getVersionAvailable());
-
-    // Check if new version is available
-    if ($updater->source()->isNewVersionAvailable()) {
-        // Get the current installed version
-        echo $updater->source()->getVersionInstalled();
-
-        // Get the new version available
-        $versionAvailable = $updater->source()->getVersionAvailable();
-        dd($versionAvailable);
-
-        // Create a release
-        $release = $updater->source()->fetch($versionAvailable);
-
-        // Run the update process
-        dd($updater->source()->update($release));
-    } else {
-        echo 'No new version available.';
-    }
-});
-
 if (config('services.indexnow.key')) {
     Route::get('{key}.txt', function (Request $request, $key) {
         if ($key === config('services.indexnow.key')) {
