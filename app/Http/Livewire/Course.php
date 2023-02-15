@@ -892,9 +892,6 @@ class Course extends Component
         }
     }
 
-    /**
-     * @return mixed
-     */
     public function getRowsQueryProperty(): mixed
     {
         $courses = '';
@@ -960,9 +957,6 @@ class Course extends Component
         return $this->applySorting($query);
     }
 
-    /**
-     * @return mixed
-     */
     public function getRowsProperty(): mixed
     {
         return $this->cache(function () {
@@ -970,9 +964,6 @@ class Course extends Component
         });
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Collection
-     */
     public function getPositionsRowsProperty(): \Illuminate\Database\Eloquent\Collection
     {
         return Position::where('team_id', null)
@@ -981,9 +972,6 @@ class Course extends Component
             ->sortBy('title');
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Collection
-     */
     public function getOwnTeamsRowsProperty(): \Illuminate\Database\Eloquent\Collection
     {
         if (Auth::user()->isAbleTo('team.*')) {
@@ -993,9 +981,6 @@ class Course extends Component
         return Auth::user()->teams;
     }
 
-    /**
-     * @return TeamModel|null
-     */
     public function getActualTeamRowsProperty(): TeamModel|null
     {
         return TeamModel::query()
@@ -1004,10 +989,6 @@ class Course extends Component
             ->first();
     }
 
-    /**
-     * @param $team_ids
-     * @return TeamModel|Builder
-     */
     private function getTeamsQuery($team_ids): Builder|TeamModel
     {
         return TeamModel::query()
@@ -1039,9 +1020,6 @@ class Course extends Component
             ]);
     }
 
-    /**
-     * @return CourseModel
-     */
     protected function makeBlankCourse(): CourseModel
     {
         $this->courseTypes = CourseTypeModel::all()->groupBy('category')->toBase();

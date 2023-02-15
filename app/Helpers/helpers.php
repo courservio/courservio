@@ -85,10 +85,6 @@ if (! function_exists('authorizedTeams')) {
  * save an array to the .env config file
  */
 if (! function_exists('saveArrayToEnv')) {
-    /**
-     * @param  array  $keyPairs
-     * @return void
-     */
     function saveArrayToEnv(array $keyPairs): void
     {
         $envFile = app()->environmentFilePath();
@@ -124,10 +120,6 @@ if (! function_exists('saveArrayToEnv')) {
  * function to correct geolocations before importing
  */
 if (! function_exists('correctGeolocation')) {
-    /**
-     * @param $location
-     * @return mixed
-     */
     function correctGeolocation($location): mixed
     {
         if (strpos($location, ',')) { // remove addons like 'Stadt'

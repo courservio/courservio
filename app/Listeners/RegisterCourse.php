@@ -45,7 +45,6 @@ class RegisterCourse implements ShouldQueue
     /**
      * Handle the event.
      *
-     * @param  CourseRegisterRequired  $event
      * @return void
      */
     public function handle(CourseRegisterRequired $event)

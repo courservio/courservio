@@ -45,9 +45,6 @@ class GenerateInternalNumber implements ShouldQueue
 
     /**
      * Handle the event.
-     *
-     * @param  CourseCreated  $event
-     * @return void
      */
     public function handle(CourseCreated $event): void
     {
