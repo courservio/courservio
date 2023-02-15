@@ -62,7 +62,6 @@ class GenerateCertificate implements ShouldQueue
     /**
      * Execute the job.
      *
-     * @return void
      *
      * @throws Exception
      */

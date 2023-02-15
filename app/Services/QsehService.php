@@ -50,11 +50,6 @@ class QsehService
             ->accept('text/xml');
     }
 
-    /**
-     * @param  Course  $course
-     * @param  string  $action
-     * @return Collection
-     */
     public function connect(Course $course, string $action = 'new'): Collection
     {
         if (! config('qseh.codeNumber') || ! config('qseh.password')) { // no service without credentials
