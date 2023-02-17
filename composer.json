@@ -18,7 +18,6 @@
         "codedge/laravel-selfupdater": "3.6.2",
         "danharrin/livewire-rate-limiting": "1.0.1",
         "doctrine/dbal": "3.6.0",
-        "fruitcake/laravel-cors": "3.0.0",
         "guzzlehttp/guzzle": "7.5.0",
         "innoge/laravel-policy-soft-cache": "1.1.0",
         "itsgoingd/clockwork": "5.1.12",
