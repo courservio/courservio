@@ -133,8 +133,6 @@ class User extends Authenticatable implements MustVerifyEmail
 
     /**
      * Send the queued email verification notification.
-     *
-     * @return void
      */
     public function sendEmailVerificationNotification(): void
     {

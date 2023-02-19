@@ -44,8 +44,6 @@ class RegisterCourse implements ShouldQueue
 
     /**
      * Handle the event.
-     *
-     * @return void
      */
     public function handle(CourseRegisterRequired $event): void
     {

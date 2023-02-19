@@ -47,7 +47,6 @@ class SendPasswordResetEmail implements ShouldQueue
     /**
      * Handle the event.
      *
-     * @return void
      *
      * @throws Exception
      */

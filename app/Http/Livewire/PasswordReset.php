@@ -69,9 +69,6 @@ class PasswordReset extends Component
         }
     }
 
-    /**
-     * @return RedirectResponse
-     */
     public function resetPassword(): RedirectResponse
     {
         $this->validate();

@@ -45,8 +45,6 @@ class SendWelcomeEmail implements ShouldQueue
 
     /**
      * Handle the event.
-     *
-     * @return void
      */
     public function handle(UserCreated $event): void
     {
