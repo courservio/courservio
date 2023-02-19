@@ -419,10 +419,10 @@
         <x-slot name="content">
             @if($batchId && !$creationFinished)
                 <div wire:poll.1s="updateCreationProgress">
-                    <ul class="max-w-md space-y-2 text-gray-500 list-inside dark:text-gray-400">
+                    <ul class="max-w-md list-inside space-y-2 text-gray-500 dark:text-gray-400">
                         <li class="flex items-center">
                             <svg aria-hidden="true"
-                                 class="w-5 h-5 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
+                                 class="mr-1.5 h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400"
                                  fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                       d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -434,7 +434,7 @@
                             <div role="status">
                                 @if(!$concat)
                                     <svg aria-hidden="true"
-                                         class="w-5 h-5 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                                         class="mr-2 h-5 w-5 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
                                          viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
@@ -446,7 +446,7 @@
                                     <span class="sr-only">Loading...</span>
                                 @else
                                     <svg aria-hidden="true"
-                                         class="w-5 h-5 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
+                                         class="mr-1.5 h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400"
                                          fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                               d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -460,7 +460,7 @@
                             <li class="flex items-center">
                                 <div role="status">
                                     <svg aria-hidden="true"
-                                         class="w-5 h-5 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                                         class="mr-2 h-5 w-5 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
                                          viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
@@ -477,10 +477,10 @@
                     </ul>
                 </div>
             @elseif($creationFinished && !$creationFailed)
-                <ul class="max-w-md space-y-2 text-gray-500 list-inside dark:text-gray-400">
+                <ul class="max-w-md list-inside space-y-2 text-gray-500 dark:text-gray-400">
                     <li class="flex items-center">
                         <svg aria-hidden="true"
-                             class="w-5 h-5 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
+                             class="mr-1.5 h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400"
                              fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                   d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -491,7 +491,7 @@
                     <li class="flex items-center">
                         <div role="status">
                             <svg aria-hidden="true"
-                                 class="w-5 h-5 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
+                                 class="mr-1.5 h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400"
                                  fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                       d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -502,7 +502,7 @@
                     </li>
                     <li class="flex items-center">
                         <svg aria-hidden="true"
-                             class="w-5 h-5 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
+                             class="mr-1.5 h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400"
                              fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                   d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -513,7 +513,7 @@
                     <li class="flex items-center">
                         <div role="status">
                             <svg aria-hidden="true"
-                                 class="w-5 h-5 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                                 class="mr-2 h-5 w-5 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
                                  viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
@@ -539,9 +539,9 @@
         <x-slot name="content">
             <div>
                 <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Converting your image:</h2>
-                <ul class="max-w-md space-y-2 text-gray-500 list-inside dark:text-gray-400">
+                <ul class="max-w-md list-inside space-y-2 text-gray-500 dark:text-gray-400">
                     <li class="flex items-center">
-                        <svg aria-hidden="true" class="w-5 h-5 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
+                        <svg aria-hidden="true" class="mr-1.5 h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400"
                              fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                   d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -551,7 +551,7 @@
                     </li>
                     <li class="flex items-center">
                         <div role="status">
-                            <svg aria-hidden="true" class="w-5 h-5 mr-1.5 text-red-500 dark:text-red-400 flex-shrink-0"
+                            <svg aria-hidden="true" class="mr-1.5 h-5 w-5 flex-shrink-0 text-red-500 dark:text-red-400"
                                  fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                 <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                 <path
