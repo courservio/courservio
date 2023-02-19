@@ -85,11 +85,6 @@ class Setup extends Command
             return Command::FAILURE;
         }
 
-        if (! File::exists(base_path('.env'))) {
-            File::copy(base_path('.env.example'), base_path('.env'));
-            Artisan::call('key:generate');
-        }
-
         $app = '';
         while (! $app) {
             $app = $this->ask('What is the Name of your company?');
@@ -213,6 +208,11 @@ class Setup extends Command
 
         $keyPairs = array_merge($keyPairs, $hash_array);
 
+        if (! File::exists(base_path('.env'))) {
+            File::copy(base_path('.env.example'), base_path('.env'));
+            Artisan::call('key:generate');
+        }
+
         saveArrayToEnv($keyPairs);
 
         $install_services = $this->confirm('Should schedule and worker be installed and activated?');
@@ -225,7 +225,6 @@ class Setup extends Command
             $replaced = Str::replace('$USER', $user, $worker);
             File::put('/home/'.$user.'/etc/services.d/courservio-worker.ini', $replaced);
 
-            //File::copy(base_path('courservio-worker.ini'), '/home/'.$user.'/etc/services.d/courservio-worker.ini');
             shell_exec('/usr/bin/supervisorctl reread');
             shell_exec('/usr/bin/supervisorctl update');
         }
