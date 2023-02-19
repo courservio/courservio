@@ -33,7 +33,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix(LaravelLocalization::setLocale())->middleware('localeSessionRedirect', 'localizationRedirect', 'localeViewPath')->group(function () {
-        Route::post('livewire/message/{name}', '\Livewire\Controllers\HttpConnectionHandler');
+        Route::post('livewire/message/{name}', \Livewire\Controllers\HttpConnectionHandler::class);
 
         Route::get('login', Login::class)
             ->middleware('guest')
