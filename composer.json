@@ -26,7 +26,7 @@
         "laravel/tinker": "2.8.0",
         "league/csv": "9.8.0",
         "livewire/livewire": "2.11.2",
-        "mcamara/laravel-localization": "1.7.0",
+        "mcamara/laravel-localization": "V1.8.0",
         "nekhbet/laravel-gettext": "dev-master",
         "phpoffice/phpword": "1.0.0",
         "prevplan/laravel-heartbeat-status": "1.0.0",
