@@ -80,10 +80,6 @@ Route::group(
         Route::get('cert-templates', CertTemplate::class)
             ->name('certTemplates');
 
-        Route::get('password/reset/{hashedId}', PasswordReset::class)
-            ->middleware('signed')
-            ->name('password.reset');
-
         Route::get('course/{slug}', LocationSearch::class);
 
         Route::get('course/{slug}/{location}', BookingOverview::class)
@@ -112,6 +108,10 @@ if (config('services.indexnow.key')) {
 Route::get('/', function () {
     return redirect(config('app.redirect'));
 });
+
+Route::get('password/reset/{hashedId}', PasswordReset::class)
+    ->middleware('signed')
+    ->name('password.reset');
 
 Route::get(
     '/email/verify',
