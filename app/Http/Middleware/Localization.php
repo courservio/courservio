@@ -23,11 +23,11 @@
 
 namespace App\Http\Middleware;
 
-use Symfony\Component\HttpFoundation\Response;
 use Closure;
 use Illuminate\Http\Request;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Nekhbet\LaravelGettext\Facades\LaravelGettext;
+use Symfony\Component\HttpFoundation\Response;
 
 class Localization
 {

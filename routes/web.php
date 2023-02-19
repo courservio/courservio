@@ -33,59 +33,59 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix(LaravelLocalization::setLocale())->middleware('localeSessionRedirect', 'localizationRedirect', 'localeViewPath')->group(function () {
-        Route::post('livewire/message/{name}', \Livewire\Controllers\HttpConnectionHandler::class);
+    Route::post('livewire/message/{name}', \Livewire\Controllers\HttpConnectionHandler::class);
 
-        Route::get('login', Login::class)
+    Route::get('login', Login::class)
             ->middleware('guest')
             ->name('login');
 
-        Route::get('home', Home::class)
+    Route::get('home', Home::class)
             ->name('home');
 
-        Route::get('teams', Team::class)
+    Route::get('teams', Team::class)
             ->name('teams');
 
-        Route::get('user', User::class)
+    Route::get('user', User::class)
             ->name('user');
 
-        Route::get('coursetype', CourseType::class)
+    Route::get('coursetype', CourseType::class)
             ->name('coursetype');
 
-        Route::get('course', Course::class)
+    Route::get('course', Course::class)
             ->name('course');
 
-        Route::get('participant/{course}', CourseParticipant::class)
+    Route::get('participant/{course}', CourseParticipant::class)
             ->name('participant.course');
 
-        Route::get('participant/{participant}/details', ParticipantDetails::class)
+    Route::get('participant/{participant}/details', ParticipantDetails::class)
             ->name('participant.details');
 
-        Route::get('participant', Participant::class)
+    Route::get('participant', Participant::class)
             ->name('participant');
 
-        Route::get('roles', Role::class)
+    Route::get('roles', Role::class)
             ->name('roles');
 
-        Route::get('prices', Price::class)
+    Route::get('prices', Price::class)
             ->name('prices');
 
-        Route::get('positions', Position::class)
+    Route::get('positions', Position::class)
             ->name('positions');
 
-        Route::get('cert-templates', CertTemplate::class)
+    Route::get('cert-templates', CertTemplate::class)
             ->name('certTemplates');
 
-        Route::get('course/{slug}', LocationSearch::class);
+    Route::get('course/{slug}', LocationSearch::class);
 
-        Route::get('course/{slug}/{location}', BookingOverview::class)
+    Route::get('course/{slug}/{location}', BookingOverview::class)
             ->name('booking.overview');
 
-        Route::get('course/{slug}/{location}/{location2}', BookingOverview::class)
+    Route::get('course/{slug}/{location}/{location2}', BookingOverview::class)
             ->name('booking.coordinates');
 
-        Route::get('booking/{course}/{price}', Booking::class)
+    Route::get('booking/{course}/{price}', Booking::class)
             ->name('booking');
-    }
+}
 );
 
 Route::get('setup', Setup::class);
