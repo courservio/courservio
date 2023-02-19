@@ -49,7 +49,7 @@ class SendParticipantBookingConfirmation implements ShouldQueue
      *
      * @return void
      */
-    public function handle(CourseBooked $event)
+    public function handle(CourseBooked $event): void
     {
         LaravelGettext::setLocale($event->locale);
 

@@ -51,7 +51,7 @@ class SendPasswordResetEmail implements ShouldQueue
      *
      * @throws Exception
      */
-    public function handle(UserForgotPassword $event)
+    public function handle(UserForgotPassword $event): void
     {
         $minutes = 30;
         $reset_link = $event->user->generatePasswordResetLink($event->user, $minutes);

@@ -47,7 +47,7 @@ class CancelCourse implements ShouldQueue
      *
      * @return void
      */
-    public function handle(CourseCancelled $event)
+    public function handle(CourseCancelled $event): void
     {
         if (
             ! $event->course->registration_number

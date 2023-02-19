@@ -47,7 +47,7 @@ class UpdateQsehCourse implements ShouldQueue
      *
      * @return void
      */
-    public function handle(QsehCourseUpdated $event)
+    public function handle(QsehCourseUpdated $event): void
     {
         if (
             ! $event->course->registration_number

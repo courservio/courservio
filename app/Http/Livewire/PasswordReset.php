@@ -72,7 +72,7 @@ class PasswordReset extends Component
     /**
      * @return RedirectResponse
      */
-    public function resetPassword()
+    public function resetPassword(): RedirectResponse
     {
         $this->validate();
 

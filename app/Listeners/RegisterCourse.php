@@ -47,7 +47,7 @@ class RegisterCourse implements ShouldQueue
      *
      * @return void
      */
-    public function handle(CourseRegisterRequired $event)
+    public function handle(CourseRegisterRequired $event): void
     {
         if ($event->course->registration_number != 'queued' && $event->course->registration_number != 'failed') {
             $this->delete();
