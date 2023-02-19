@@ -120,6 +120,11 @@ class Setup extends Component
     {
         abort_unless(config('app.owner'), 404);
 
+        // Prevent error if first run
+        Artisan::call('migrate', [
+            '--force' => true,
+        ]);
+
         // Check if a user already exists
         $user = (new User())->first();
         abort_if(isset($user), 404);
