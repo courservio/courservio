@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9095ac6a949c239cccb5de95d1005723",
+    "content-hash": "8a64aaa70dbee833016bd738c2644963",
     "packages": [
         {
             "name": "brick/math",
@@ -4266,28 +4266,28 @@
         },
         {
             "name": "prevplan/laravel-heartbeat-status",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/prevplan/laravel-heartbeat-status.git",
-                "reference": "8155984fca6646d36c7ddaa7e93e84a332f173cd"
+                "reference": "d7487ccdc5928b5fd77c8021ac5ff2c06b94ae9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/prevplan/laravel-heartbeat-status/zipball/8155984fca6646d36c7ddaa7e93e84a332f173cd",
-                "reference": "8155984fca6646d36c7ddaa7e93e84a332f173cd",
+                "url": "https://api.github.com/repos/prevplan/laravel-heartbeat-status/zipball/d7487ccdc5928b5fd77c8021ac5ff2c06b94ae9c",
+                "reference": "d7487ccdc5928b5fd77c8021ac5ff2c06b94ae9c",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "^9.0",
+                "illuminate/contracts": "^9.0|^10.0",
                 "php": "^8.1",
                 "spatie/laravel-package-tools": "^1.14.1"
             },
             "require-dev": {
-                "laravel/pint": "^1.4",
+                "laravel/pint": "^1.5",
                 "nunomaduro/collision": "^6.4",
-                "nunomaduro/larastan": "^2.4.0",
-                "orchestra/testbench": "^7.21",
+                "nunomaduro/larastan": "^2.4.1",
+                "orchestra/testbench": "^7.22",
                 "pestphp/pest": "^1.22",
                 "pestphp/pest-plugin-laravel": "^1.4",
                 "phpstan/extension-installer": "^1.2",
@@ -4337,9 +4337,9 @@
             ],
             "support": {
                 "issues": "https://github.com/prevplan/laravel-heartbeat-status/issues",
-                "source": "https://github.com/prevplan/laravel-heartbeat-status/tree/v1.0.0"
+                "source": "https://github.com/prevplan/laravel-heartbeat-status/tree/v1.0.1"
             },
-            "time": "2023-02-07T21:36:58+00:00"
+            "time": "2023-02-19T17:31:00+00:00"
         },
         {
             "name": "psr/cache",
