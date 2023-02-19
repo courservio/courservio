@@ -257,11 +257,11 @@ class CourseParticipant extends Component
         $batch = Bus::batch([
             $jobBag,
         ])->then(function (Batch $batch) { // success
-            //cleanup after 3 hour
+        //cleanup after 3 hour
             DeleteCerts::dispatch($batch->id)
                 ->delay(now()->addHours(3));
         })->catch(function (Batch $batch, Throwable $e) { // failed
-            // cleanup directly
+        // cleanup directly
             DeleteCerts::dispatch($batch->id)
                 ->delay(now()->addSeconds(30));
         })->dispatch();

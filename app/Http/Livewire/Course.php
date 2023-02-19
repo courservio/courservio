@@ -190,10 +190,11 @@ class Course extends Component
         $this->start_options = array_merge($this->start_options, $start_options);
     }
 
-    private function setEndOptions(array $end_options): void
-    {
-        $this->end_options = array_merge($this->end_options, $end_options);
-    }
+    // TODO check usage
+//    private function setEndOptions(array $end_options): void
+//    {
+//        $this->end_options = array_merge($this->end_options, $end_options);
+//    }
 
     public function updatedFilters()
     {
