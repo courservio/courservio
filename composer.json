@@ -25,7 +25,7 @@
         "laravel/sanctum": "3.2.1",
         "laravel/tinker": "2.8.0",
         "league/csv": "9.8.0",
-        "livewire/livewire": "2.11.2",
+        "livewire/livewire": "2.11.3",
         "mcamara/laravel-localization": "V1.8.0",
         "nekhbet/laravel-gettext": "dev-master",
         "phpoffice/phpword": "1.0.0",
