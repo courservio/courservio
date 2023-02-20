@@ -215,7 +215,7 @@ class Setup extends Command
 
         saveArrayToEnv($keyPairs);
 
-        $install_services = $this->confirm('Should schedule and worker be installed and activated?');
+        $install_services = $this->confirm('Should schedule and worker be installed and activated?', true);
 
         if ($install_services) {
             shell_exec('(crontab -l ; echo "* * * * * cd /var/www/virtual/'.$user.'/courservio && php artisan schedule:run >> /dev/null 2>&1") | crontab -');
