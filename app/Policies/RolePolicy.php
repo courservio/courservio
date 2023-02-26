@@ -26,7 +26,6 @@ namespace App\Policies;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
-use Illuminate\Auth\Access\Response;
 
 class RolePolicy
 {
@@ -34,10 +33,8 @@ class RolePolicy
 
     /**
      * Determine whether the user can view any models.
-     *
-     * @return Response|bool
      */
-    public function viewAny(User $user)
+    public function viewAny(User $user): bool
     {
         return $user->isAbleTo('role.*');
     }
@@ -56,10 +53,8 @@ class RolePolicy
 
     /**
      * Determine whether the user can create models.
-     *
-     * @return Response|bool
      */
-    public function create(User $user)
+    public function create(User $user): bool
     {
         if ($user->isAbleTo('role.create')) {
             return true;
@@ -70,10 +65,8 @@ class RolePolicy
 
     /**
      * Determine whether the user can update the model.
-     *
-     * @return Response|bool
      */
-    public function update(User $user, Role $role)
+    public function update(User $user, Role $role): bool
     {
         if ($user->isAbleTo('role.update')) {
             return true;

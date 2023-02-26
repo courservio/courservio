@@ -45,10 +45,8 @@ class SendWelcomeEmail implements ShouldQueue
 
     /**
      * Handle the event.
-     *
-     * @return void
      */
-    public function handle(UserCreated $event)
+    public function handle(UserCreated $event): void
     {
         $minutes = 1440; // 24 h
         $reset_link = $event->user->generatePasswordResetLink($event->user, $minutes);

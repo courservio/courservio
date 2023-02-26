@@ -18,6 +18,7 @@ return [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
+        'scheme' => 'https',
     ],
 
     'postmark' => [
@@ -34,4 +35,5 @@ return [
         'key' => env('INDEXNOW_KEY'),
         'url' => env('INDEXNOW_URL', 'https://api.indexnow.org/indexnow'),
     ],
+
 ];

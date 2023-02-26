@@ -87,10 +87,8 @@ class PricePolicy
 
     /**
      * Determine whether the user can create or update a model.
-     *
-     * @return bool
      */
-    public function save(User $user, Price $price)
+    public function save(User $user, Price $price): bool
     {
         if ($user->can('create', $price) || $user->can('update', $price)) {
             return true;

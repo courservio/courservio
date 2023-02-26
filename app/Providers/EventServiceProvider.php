@@ -95,4 +95,12 @@ class EventServiceProvider extends ServiceProvider
     {
         User::observe(UserObserver::class);
     }
+
+    /**
+     * Determine if events and listeners should be automatically discovered.
+     */
+    public function shouldDiscoverEvents(): bool
+    {
+        return false;
+    }
 }

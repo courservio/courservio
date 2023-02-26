@@ -27,15 +27,14 @@ use Closure;
 use Illuminate\Http\Request;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Nekhbet\LaravelGettext\Facades\LaravelGettext;
+use Symfony\Component\HttpFoundation\Response;
 
 class Localization
 {
     /**
      * Handle an incoming request.
-     *
-     * @return mixed
      */
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next): Response
     {
         LaravelGettext::setLocale(LaravelLocalization::getCurrentLocaleRegional());
 
