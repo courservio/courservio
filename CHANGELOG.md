@@ -2,9 +2,49 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/courservio/courservio/compare/v0.1.1...HEAD)
+## [Unreleased](https://github.com/courservio/courservio/compare/v0.1.2...HEAD)
 
 Please do not update the unreleased notes.
+
+## [v0.1.2](https://github.com/courservio/courservio/compare/v0.1.1...v0.1.2) - 2023-02-26
+
+### Changes
+
+- Laravel 10.x Shift @prevplanbot (#84)
+- Tailwind Linter @prevplanbot (#87)
+
+### 🚀 Features
+
+- some enhancements to the update routine @ruaq (#88)
+- add setup command @ruaq (#83)
+
+### 🐛 Bug Fixes
+
+- bugfix: password reset link @ruaq (#82)
+
+### Dependency Updates
+
+- chore(deps): lock file maintenance @renovate (#106)
+- chore(deps): update dependency deployer/deployer to v7.2.0 @renovate (#103)
+- fix(deps): update dependency livewire/livewire to v2.12.1 @renovate (#102)
+- fix(deps): update dependency laravel/framework to v9.52.4 @renovate (#101)
+- chore(deps): update dependency squizlabs/php_codesniffer to v3.7.2 @renovate (#100)
+- chore(deps): update dependency axios to v1.3.4 @renovate (#99)
+- chore(deps): update dependency laravel/sail to v1.21.0 @renovate (#98)
+- chore(deps): update dependency laravel/pint to v1.6.0 @renovate (#97)
+- fix(deps): update dependency laravel/tinker to v2.8.1 @renovate (#96)
+- fix(deps): update dependency laravel/framework to v9.52.2 @renovate (#95)
+- chore(deps): update dependency vite to v4.1.4 @renovate (#94)
+- fix(deps): update dependency livewire/livewire to v2.12.0 @renovate (#93)
+- fix(deps): update dependency santigarcor/laratrust to v7.2.1 @renovate (#92)
+- fix(deps): update dependency livewire/livewire to v2.11.3 @renovate (#91)
+- chore(deps): update dependency vite to v4.1.3 @renovate (#90)
+- chore(deps): lock file maintenance @renovate (#89)
+- fix(deps): update dependency prevplan/laravel-heartbeat-status to v1.0.1 @renovate (#86)
+- fix(deps): update dependency santigarcor/laratrust to v7.2.0 @renovate (#81)
+- fix(deps): update dependency mcamara/laravel-localization to v1.8.0 @renovate (#80)
+- chore(deps): update dependency sass to v1.58.3 @renovate (#79)
+- chore(deps): update dependency vite to v4.1.2 @renovate (#77)
 
 ## [v0.1.1](https://github.com/courservio/courservio/compare/v0.1.0...v0.1.1) - 2023-02-17
 
