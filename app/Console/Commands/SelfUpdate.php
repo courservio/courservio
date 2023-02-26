@@ -25,6 +25,7 @@ declare(strict_types=1);
 
 namespace App\Console\Commands;
 
+use Artisan;
 use Cache;
 use Codedge\Updater\UpdaterManager;
 use Exception;
@@ -94,6 +95,20 @@ class SelfUpdate extends Command
 
         if (! $update) {
             $this->warn('Update failed!');
+
+            return \Symfony\Component\Console\Command\Command::FAILURE;
+        }
+
+        shell_exec('composer install &>/dev/null');
+        shell_exec('npm install &>/dev/null');
+        shell_exec('npm run build &>/dev/null');
+
+        $migrate = Artisan::call('migrate', [
+            '--force' => true,
+        ]);
+
+        if ($migrate) {
+            $this->warn('Migration failed!');
 
             return \Symfony\Component\Console\Command\Command::FAILURE;
         }
