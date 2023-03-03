@@ -53,13 +53,6 @@ class Login extends Component
         'password' => 'required',
     ];
 
-    protected $listeners = ['captchaSolved'];
-
-    public function captchaSolved()
-    {
-        $this->solved = true;
-    }
-
     /**
      * @throws ValidationException
      */
@@ -93,13 +86,6 @@ class Login extends Component
                 $exception->secondsUntilAvailable,
                 $exception->secondsUntilAvailable
             ));
-
-            return;
-        }
-
-        if (! $this->solved) {
-            $this->emit('resetCaptcha');
-            $this->addError('captcha', _i('Captcha not solved!'));
 
             return;
         }

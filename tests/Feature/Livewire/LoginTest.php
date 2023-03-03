@@ -39,19 +39,10 @@ it('needs a password', function () {
         ->assertHasErrors(['password' => 'required']);
 });
 
-it('require a valid captcha to login', function () {
-    Livewire::test('auth.login')
-        ->set('email', 'test@example.com')
-        ->set('password', 'wrong')
-        ->call('login')
-        ->assertHasErrors('captcha');
-});
-
 it('needs valid credentials', function () {
     Livewire::test('auth.login')
         ->set('email', 'test@example.com')
         ->set('password', 'wrong')
-        ->emit('captchaSolved')
         ->call('login')
         ->assertHasErrors('email')
         ->assertSee(trans('auth.failed'));
@@ -64,7 +55,6 @@ it('get blocked after 3 failed login tries', function () {
         Livewire::test('auth.login')
             ->set('email', 'test@example.com')
             ->set('password', 'wrong')
-            ->emit('captchaSolved')
             ->call('login')
             ->assertHasNoErrors('captcha');
         $i++;
@@ -73,7 +63,6 @@ it('get blocked after 3 failed login tries', function () {
     Livewire::test('auth.login')
         ->set('email', 'test@example.com')
         ->set('password', 'wrong')
-        ->emit('captchaSolved')
         ->call('login')
         ->assertHasErrors('captcha')
         ->assertSee('Too many login attempts.');
@@ -90,7 +79,6 @@ it('can login', function () {
     Livewire::test('auth.login')
         ->set('email', $user->email)
         ->set('password', 'password')
-        ->emit('captchaSolved')
         ->call('login')
         ->assertRedirect(route('home'));
 
@@ -108,7 +96,6 @@ it('needs to be an active user to login', function () {
     Livewire::test('auth.login')
         ->set('email', $user->email)
         ->set('password', 'password')
-        ->emit('captchaSolved')
         ->call('login')
         ->assertHasErrors('email')
         ->assertSee(trans('auth.inactive'));
