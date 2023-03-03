@@ -26,7 +26,6 @@ namespace App\Http\Livewire;
 use App\Models\User;
 use Carbon\Carbon;
 use DateTimeImmutable;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Request;
 use Livewire\Component;
@@ -69,7 +68,7 @@ class PasswordReset extends Component
         }
     }
 
-    public function resetPassword(): RedirectResponse
+    public function resetPassword(): \Illuminate\Routing\Redirector|\Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse
     {
         $this->validate();
 
@@ -77,7 +76,7 @@ class PasswordReset extends Component
         $this->user->reset_valid_until = null;
         $this->user->save();
 
-        return redirect()->route('login');
+        return redirect(route('login'));
     }
 
     public function render()
