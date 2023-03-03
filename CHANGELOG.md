@@ -2,9 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/courservio/courservio/compare/v0.1.2...HEAD)
+## [Unreleased](https://github.com/courservio/courservio/compare/v0.1.3...HEAD)
 
 Please do not update the unreleased notes.
+
+## [v0.1.3](https://github.com/courservio/courservio/compare/v0.1.2...v0.1.3) - 2023-03-03
+
+### Changes
+
+- remove friendly captcha @ruaq (#114)
+
+### Dependency Updates
+
+- chore(deps): lock file maintenance @renovate (#116)
+- fix(deps): update dependency spatie/laravel-ray to v1.32.3 @renovate (#115)
+- fix(deps): update dependency doctrine/dbal to v3.6.1 @renovate (#113)
+- chore(deps): update dependency laravel/sail to v1.21.1 @renovate (#112)
+- fix(deps): update dependency laravel/framework to v10.2.0 @renovate (#85)
+- chore(deps): update dependency deployer/deployer to v7.2.1 @renovate (#111)
+- fix(deps): update dependency @hotwired/turbo to v7.3.0 @renovate (#110)
+- fix(deps): update dependency livewire/livewire to v2.12.2 @renovate (#109)
+- fix(deps): update dependency friendly-challenge to v0.9.11 @renovate (#108)
+- chore(deps): update dependency phpunit/phpunit to v9.6.4 @renovate (#107)
 
 ## [v0.1.2](https://github.com/courservio/courservio/compare/v0.1.1...v0.1.2) - 2023-02-26
 
