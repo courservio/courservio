@@ -29,7 +29,5 @@
         <env name="TELESCOPE_ENABLED" value="false"/>
         <env name="CACHE_ALL_POLICIES" value="false"/>
         <env name="LOCALIZATION_HIDE_DEFAULT_LOCALE" value="true" />
-        <env name="FRIENDLY_CAPTCHA_SECRET" value="XXX" />
-        <env name="FRIENDLY_CAPTCHA_SITEKEY" value="XXX" />
     </php>
 </phpunit>

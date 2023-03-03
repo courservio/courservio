@@ -52,16 +52,6 @@
         window.livewire_app_url = "{{ \Illuminate\Support\Facades\Request::getSchemeAndHttpHost() }}/{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getCurrentLocale() }}"
     </script>
 
-    <script>
-        Livewire.on('resetCaptcha', () => {
-            friendlyChallenge.autoWidget.reset();
-        })
-
-        Livewire.on('destroyCaptcha', () => {
-            friendlyChallenge.autoWidget.destroy();
-        })
-
-    </script>
     <livewire:auth.logout />
 </body>
 </html>

@@ -13,8 +13,6 @@ import * as Turbo from "@hotwired/turbo"
 
 import 'livewire-turbolinks'
 
-import 'friendly-challenge/widget'
-
 import 'flatpickr'
 const flatpickr = require("flatpickr");
 
