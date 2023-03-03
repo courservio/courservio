@@ -48,9 +48,6 @@
     {{ $slot }}
 
     @livewireScripts
-    <script>
-        window.livewire_app_url = "{{ \Illuminate\Support\Facades\Request::getSchemeAndHttpHost() }}/{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getCurrentLocale() }}"
-    </script>
 
     <livewire:auth.logout />
 </body>
