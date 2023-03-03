@@ -80,9 +80,9 @@ class BookingOverview extends Component
         $this->showPriceModal = true;
     }
 
-    public function selectCourse($course, $price)
+    public function selectCourse($course, $price): \Illuminate\Routing\Redirector|\Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse
     {
-        return redirect()->route('booking', ['course' => Hashids::encode($course), 'price' => Hashids::encode($price)]);
+        return redirect(route('booking', ['course' => Hashids::encode($course), 'price' => Hashids::encode($price)]));
     }
 
     public function render()
