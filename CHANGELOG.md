@@ -2,9 +2,43 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/courservio/courservio/compare/v0.1.4...HEAD)
+## [Unreleased](https://github.com/courservio/courservio/compare/v0.1.5...HEAD)
 
 Please do not update the unreleased notes.
+
+## [v0.1.5](https://github.com/courservio/courservio/compare/v0.1.4...v0.1.5) - 2023-03-21
+
+### Changes
+
+- pestphp upgrade to v2.0 @ruaq (#146)
+
+### Dependency Updates
+
+- chore(deps): update dependency laravel/pint to v1.7.0 @renovate (#147)
+- chore(deps): update dependency nunomaduro/collision to v7.3.1 @renovate (#51)
+- fix(deps): update dependency innoge/laravel-policy-soft-cache to v1.1.1 @renovate (#143)
+- chore(deps): update dependency vite to v4.2.1 @renovate (#142)
+- chore(deps): lock file maintenance @renovate (#141)
+- fix(deps): update dependency laravel/framework to v10.4.1 @renovate (#140)
+- chore(deps): update dependency sass-loader to v13.2.1 @renovate (#139)
+- fix(deps): update dependency laravel/framework to v10.4.0 @renovate (#138)
+- chore(deps): update dependency vite to v4.2.0 @renovate (#137)
+- chore(deps): update dependency sass to v1.59.3 @renovate (#136)
+- chore(deps): lock file maintenance @renovate (#135)
+- fix(deps): update dependency danharrin/livewire-rate-limiting to v1.1.0 @renovate (#134)
+- fix(deps): update dependency league/csv to v9.9.0 @renovate (#133)
+- chore(deps): update dependency sass to v1.59.2 @renovate (#132)
+- fix(deps): update dependency laravel/framework to v10.3.3 @renovate (#131)
+- chore(deps): update dependency phpunit/phpunit to v9.6.5 @renovate (#130)
+- chore(deps): update dependency autoprefixer to v10.4.14 @renovate (#129)
+- fix(deps): update dependency laravel/framework to v10.3.2 @renovate (#128)
+- fix(deps): update dependency laravel/framework to v10.3.1 @renovate (#127)
+- fix(deps): update dependency laravel/framework to v10.3.0 @renovate (#126)
+- fix(deps): update dependency alpinejs to v3.12.0 @renovate (#125)
+- chore(deps): update dependency laravel/sail to v1.21.2 @renovate (#124)
+- chore(deps): lock file maintenance @renovate (#123)
+- chore(deps): update dependency nunomaduro/larastan to v2.5.1 @renovate (#122)
+- fix(deps): update dependency livewire/livewire to v2.12.3 @renovate (#121)
 
 ## [v0.1.4](https://github.com/courservio/courservio/compare/v0.1.3...v0.1.4) - 2023-03-03
 
