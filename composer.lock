@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61c8f4e46ed4f6b2c2354e6174fe5230",
+    "content-hash": "ce025ebad58f20393bdafe6f21ac5d08",
     "packages": [
         {
             "name": "brick/math",
@@ -1599,16 +1599,16 @@
         },
         {
             "name": "innoge/laravel-policy-soft-cache",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/InnoGE/laravel-policy-soft-cache.git",
-                "reference": "95847235bd97c74bd1dafa19556a05b70f373ec3"
+                "reference": "d19db37ed8cd06bd2630c9737ad0b7855d13303a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/InnoGE/laravel-policy-soft-cache/zipball/95847235bd97c74bd1dafa19556a05b70f373ec3",
-                "reference": "95847235bd97c74bd1dafa19556a05b70f373ec3",
+                "url": "https://api.github.com/repos/InnoGE/laravel-policy-soft-cache/zipball/d19db37ed8cd06bd2630c9737ad0b7855d13303a",
+                "reference": "d19db37ed8cd06bd2630c9737ad0b7855d13303a",
                 "shasum": ""
             },
             "require": {
@@ -1661,9 +1661,9 @@
             ],
             "support": {
                 "issues": "https://github.com/InnoGE/laravel-policy-soft-cache/issues",
-                "source": "https://github.com/InnoGE/laravel-policy-soft-cache/tree/1.1.0"
+                "source": "https://github.com/InnoGE/laravel-policy-soft-cache/tree/1.1.1"
             },
-            "time": "2023-02-01T07:51:01+00:00"
+            "time": "2023-03-20T19:12:22+00:00"
         },
         {
             "name": "intervention/image",
