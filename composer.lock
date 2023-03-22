@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b730d18bf7dbebd7f344799e18fc1f23",
+    "content-hash": "2300293036c3f161f5fae85a9b13aee0",
     "packages": [
         {
             "name": "brick/math",
@@ -10353,16 +10353,16 @@
         },
         {
             "name": "pestphp/pest",
-            "version": "v2.2.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest.git",
-                "reference": "7a699e16dbd2145a5c891e765483e8ba10a60fbf"
+                "reference": "221ac62f03e0236275b6ebd36ad35667e0e50acb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pestphp/pest/zipball/7a699e16dbd2145a5c891e765483e8ba10a60fbf",
-                "reference": "7a699e16dbd2145a5c891e765483e8ba10a60fbf",
+                "url": "https://api.github.com/repos/pestphp/pest/zipball/221ac62f03e0236275b6ebd36ad35667e0e50acb",
+                "reference": "221ac62f03e0236275b6ebd36ad35667e0e50acb",
                 "shasum": ""
             },
             "require": {
@@ -10372,10 +10372,10 @@
                 "pestphp/pest-plugin": "^2.0.0",
                 "pestphp/pest-plugin-arch": "^2.0.1",
                 "php": "^8.1.0",
-                "phpunit/phpunit": "^10.0.17"
+                "phpunit/phpunit": "^10.0.18"
             },
             "conflict": {
-                "phpunit/phpunit": ">10.0.17",
+                "phpunit/phpunit": ">10.0.18",
                 "webmozart/assert": "<1.11.0"
             },
             "require-dev": {
@@ -10436,7 +10436,7 @@
             ],
             "support": {
                 "issues": "https://github.com/pestphp/pest/issues",
-                "source": "https://github.com/pestphp/pest/tree/v2.2.0"
+                "source": "https://github.com/pestphp/pest/tree/v2.2.1"
             },
             "funding": [
                 {
@@ -10448,7 +10448,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-22T10:05:58+00:00"
+            "time": "2023-03-22T11:20:25+00:00"
         },
         {
             "name": "pestphp/pest-plugin",
@@ -11448,16 +11448,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.0.17",
+            "version": "10.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b75eddcabca052312ae38c8a2bc69ff1a7b89b77"
+                "reference": "582563ed2edc62d1455cdbe00ea49fe09428eef3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b75eddcabca052312ae38c8a2bc69ff1a7b89b77",
-                "reference": "b75eddcabca052312ae38c8a2bc69ff1a7b89b77",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/582563ed2edc62d1455cdbe00ea49fe09428eef3",
+                "reference": "582563ed2edc62d1455cdbe00ea49fe09428eef3",
                 "shasum": ""
             },
             "require": {
@@ -11529,7 +11529,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.0.17"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.0.18"
             },
             "funding": [
                 {
@@ -11545,7 +11545,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-03-20T14:42:33+00:00"
+            "time": "2023-03-22T06:15:31+00:00"
         },
         {
             "name": "sebastian/cli-parser",
