@@ -2,9 +2,41 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/courservio/courservio/compare/v0.1.5...HEAD)
+## [Unreleased](https://github.com/courservio/courservio/compare/v0.1.6...HEAD)
 
 Please do not update the unreleased notes.
+
+## [v0.1.6](https://github.com/courservio/courservio/compare/v0.1.5...v0.1.6) - 2023-04-05
+
+### Changes
+
+- upgrade laratrust to v8.0.1 @ruaq (#170)
+- migrate phpunit.xml to actual version @ruaq (#171)
+
+### Dependency Updates
+
+- chore(deps): lock file maintenance @renovate (#172)
+- fix(deps): update dependency laravel/framework to v10.6.1 @renovate (#169)
+- chore(deps): update dependency laravel/pint to v1.8.0 @renovate (#168)
+- chore(deps): update dependency laravel/sail to v1.21.4 @renovate (#167)
+- chore(deps): lock file maintenance @renovate (#166)
+- chore(deps): update dependency nunomaduro/collision to v7.4.0 @renovate (#165)
+- chore(deps): update dependency tailwindcss to v3.3.1 @renovate (#164)
+- chore(deps): update dependency @tailwindcss/line-clamp to v0.4.4 @renovate (#163)
+- bump phpunit to 10.0.19 @ruaq (#162)
+- fix(deps): update dependency laravel/framework to v10.5.1 @renovate (#160)
+- chore(deps): update dependency tailwindcss to v3.3.0 @renovate (#159)
+- chore(deps): update dependency laravel/sail to v1.21.3 @renovate (#158)
+- fix(deps): update dependency @fortawesome/fontawesome-free to v6.4.0 @renovate (#157)
+- chore(deps): update dependency sass-loader to v13.2.2 @renovate (#156)
+- chore(deps): lock file maintenance @renovate (#155)
+- chore(deps): update dependency deployer/deployer to v7.3.0 @renovate (#154)
+- chore(deps): update dependency sass to v1.60.0 @renovate (#153)
+- chore(deps): update dependency nunomaduro/collision to v7.3.3 @renovate (#152)
+- fix(deps): update dependency spatie/laravel-ray to v1.32.4 @renovate (#151)
+- bump phpunit to 10.0.18 @ruaq (#150)
+- chore(deps): lock file maintenance @renovate (#149)
+- chore(deps): update dependency nunomaduro/collision to v7.3.2 @renovate (#148)
 
 ## [v0.1.5](https://github.com/courservio/courservio/compare/v0.1.4...v0.1.5) - 2023-03-21
 
