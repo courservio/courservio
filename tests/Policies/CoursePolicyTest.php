@@ -23,12 +23,12 @@ beforeEach(function () {
 it('needs permission to create a new course', function () {
     $this->assertFalse($this->user->can('create', Course::class));
 
-    $this->user->attachPermission('course.create');
+    $this->user->givePermission('course.create');
 
     $this->assertTrue($this->user->can('create', Course::class));
 
-    $this->user->detachPermission('course.create');
-    $this->user->attachPermission('course.create', $this->team);
+    $this->user->removePermission('course.create');
+    $this->user->givePermission('course.create', $this->team);
 
     $this->assertTrue($this->user->can('create', Course::class));
 });
@@ -38,12 +38,12 @@ it('needs permission to edit a course', function () {
 
     $this->assertFalse($this->user->can('update', $course));
 
-    $this->user->attachPermission('course.update');
+    $this->user->givePermission('course.update');
 
     $this->assertTrue($this->user->can('update', $course));
 
-    $this->user->detachPermission('course.update');
-    $this->user->attachPermission('course.update', $this->team);
+    $this->user->removePermission('course.update');
+    $this->user->givePermission('course.update', $this->team);
 
     $this->assertTrue($this->user->can('update', $course));
 });
@@ -51,25 +51,25 @@ it('needs permission to edit a course', function () {
 it('has anyView function', function () {
     $this->assertFalse($this->user->can('viewAny', Course::class));
 
-    $this->user->attachPermission('course.create');
+    $this->user->givePermission('course.create');
 
     $this->assertTrue($this->user->can('viewAny', Course::class));
 
-    $this->user->detachPermission('course.create');
-    $this->user->attachPermission('course.create', $this->team);
+    $this->user->removePermission('course.create');
+    $this->user->givePermission('course.create', $this->team);
 
     $this->assertTrue($this->user->can('viewAny', Course::class));
 
-    $this->user->detachPermission('course.create', $this->team);
+    $this->user->removePermission('course.create', $this->team);
 
     $this->assertFalse($this->user->can('viewAny', Course::class));
 
-    $this->user->attachPermission('course.update');
+    $this->user->givePermission('course.update');
 
     $this->assertTrue($this->user->can('viewAny', Course::class));
 
-    $this->user->detachPermission('course.update');
-    $this->user->attachPermission('course.update', $this->team);
+    $this->user->removePermission('course.update');
+    $this->user->givePermission('course.update', $this->team);
 
     $this->assertTrue($this->user->can('viewAny', Course::class));
 });

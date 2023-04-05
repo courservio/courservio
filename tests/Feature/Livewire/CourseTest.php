@@ -25,13 +25,13 @@ beforeEach(function () {
     $this->user = User::factory()->create();
     $this->user->teams()->attach($this->team);
 
-    //  $this->user->attachRole('admin');
+    //  $this->user->addRole('admin');
 
     actingAs($this->user);
 });
 
 it('can render the component', function () {
-    $this->user->attachRole('admin');
+    $this->user->addRole('admin');
 
     $component = Livewire::test(Course::class);
 
@@ -41,7 +41,7 @@ it('can render the component', function () {
 it('has course page which needs to be logged in', function () {
     $this->withoutVite();
 
-    $this->user->attachRole('admin');
+    $this->user->addRole('admin');
 
     $response = $this->get(route('course'));
 
@@ -55,25 +55,25 @@ it('has course page which needs to be logged in', function () {
 });
 
 it('needs permission to create a course', function () {
-    $this->user->attachPermission('course.view'); // avoid 'fingerprint' error
+    $this->user->givePermission('course.view'); // avoid 'fingerprint' error
 
     Livewire::test('course')
         ->call('create')
         ->assertForbidden();
 
-    $this->user->attachPermission('course.create');
+    $this->user->givePermission('course.create');
 
     Livewire::test('course')
         ->call('create')
         ->assertSuccessful();
 
-    $this->user->detachPermission('course.create');
+    $this->user->removePermission('course.create');
 
     Livewire::test('course')
         ->call('create')
         ->assertForbidden();
 
-    $this->user->attachPermission('course.create', $this->team);
+    $this->user->givePermission('course.create', $this->team);
 
     Livewire::test('course')
         ->call('create')
@@ -81,13 +81,13 @@ it('needs permission to create a course', function () {
 });
 
 it('needs permission to update a course', function () {
-    $this->user->attachPermission('course.view'); // avoid 'fingerprint' error
+    $this->user->givePermission('course.view'); // avoid 'fingerprint' error
 
     Livewire::test('course')
         ->call('edit')
         ->assertForbidden();
 
-    $this->user->attachPermission('course.update');
+    $this->user->givePermission('course.update');
 
     Livewire::test('course')
         ->call('edit')
@@ -96,25 +96,25 @@ it('needs permission to update a course', function () {
 
 // TODO rewrite test (team is missing)
 //it('needs permission to save a new course or update it', function () {
-//    $this->user->attachPermission('course.view'); // avoid 'fingerprint' error
+//    $this->user->givePermission('course.view'); // avoid 'fingerprint' error
 //
 //    Livewire::test('course')
 //        ->call('save')
 //        ->assertForbidden();
 //
-//    $this->user->attachPermission('course.create');
+//    $this->user->givePermission('course.create');
 //
 //    Livewire::test('course')
 //        ->call('save')
 //        ->assertSuccessful();
 //
-//    $this->user->detachPermission('course.create');
+//    $this->user->removePermission('course.create');
 //
 //    Livewire::test('course')
 //        ->call('save')
 //        ->assertForbidden();
 //
-//    $this->user->attachPermission('course.update');
+//    $this->user->givePermission('course.update');
 //
 //    Livewire::test('course')
 //        ->call('save')

@@ -27,7 +27,7 @@ use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Carbon;
-use Laratrust\Models\LaratrustPermission;
+use Laratrust\Models\Permission as PermissionModel;
 
 /**
  * App\Models\Permission
@@ -55,7 +55,7 @@ use Laratrust\Models\LaratrustPermission;
  *
  * @mixin Eloquent
  */
-class Permission extends LaratrustPermission
+class Permission extends PermissionModel
 {
     public $guarded = [];
 }

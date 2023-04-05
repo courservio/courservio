@@ -23,7 +23,7 @@ beforeEach(function () {
 it('needs permission to create a new Course type', function () {
     $this->assertFalse($this->user->can('create', CourseType::class));
 
-    $this->user->attachPermission('courseType.create');
+    $this->user->givePermission('courseType.create');
 
     $this->assertTrue($this->user->can('create', CourseType::class));
 });
@@ -33,7 +33,7 @@ it('needs permission to edit a Course type', function () {
 
     $this->assertFalse($this->user->can('update', $courseType));
 
-    $this->user->attachPermission('courseType.update');
+    $this->user->givePermission('courseType.update');
 
     $this->assertTrue($this->user->can('update', $courseType));
 });
@@ -41,15 +41,15 @@ it('needs permission to edit a Course type', function () {
 it('has anyView function', function () {
     $this->assertFalse($this->user->can('viewAny', CourseType::class));
 
-    $this->user->attachPermission('courseType.create');
+    $this->user->givePermission('courseType.create');
 
     $this->assertTrue($this->user->can('viewAny', CourseType::class));
 
-    $this->user->detachPermission('courseType.create');
+    $this->user->removePermission('courseType.create');
 
     $this->assertFalse($this->user->can('viewAny', CourseType::class));
 
-    $this->user->attachPermission('courseType.update');
+    $this->user->givePermission('courseType.update');
 
     $this->assertTrue($this->user->can('viewAny', CourseType::class));
 });

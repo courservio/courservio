@@ -16,15 +16,15 @@ beforeEach(function () {
 it('has anyView function', function () {
     $this->assertFalse($this->user->can('viewAny', Role::class));
 
-    $this->user->attachPermission('role.create');
+    $this->user->givePermission('role.create');
 
     $this->assertTrue($this->user->can('viewAny', Role::class));
 
-    $this->user->detachPermission('role.create');
+    $this->user->removePermission('role.create');
 
     $this->assertFalse($this->user->can('viewAny', Role::class));
 
-    $this->user->attachPermission('role.update');
+    $this->user->givePermission('role.update');
 
     $this->assertTrue($this->user->can('viewAny', Role::class));
 });
@@ -32,7 +32,7 @@ it('has anyView function', function () {
 it('needs permission to create a new role', function () {
     $this->assertFalse($this->user->can('create', Role::class));
 
-    $this->user->attachPermission('role.create');
+    $this->user->givePermission('role.create');
 
     $this->assertTrue($this->user->can('create', Role::class));
 });
@@ -42,7 +42,7 @@ it('needs permission to edit a role', function () {
 
     $this->assertFalse($this->user->can('update', $role));
 
-    $this->user->attachPermission('role.update');
+    $this->user->givePermission('role.update');
 
     $this->assertTrue($this->user->can('update', $role));
 });

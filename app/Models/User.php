@@ -38,7 +38,7 @@ use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\URL;
-use Laratrust\Traits\LaratrustUserTrait;
+use Laratrust\Traits\HasRolesAndPermissions;
 use Laravel\Sanctum\HasApiTokens;
 use Laravel\Sanctum\PersonalAccessToken;
 use Vinkla\Hashids\Facades\Hashids;
@@ -98,7 +98,7 @@ use Vinkla\Hashids\Facades\Hashids;
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use LaratrustUserTrait;
+    use HasRolesAndPermissions;
     use HasApiTokens;
     use HasFactory;
     use Notifiable;

@@ -109,7 +109,7 @@ class Setup extends Component
             'active' => 1,
         ]);
 
-        $user->attachRole('admin');
+        $user->addRole('admin');
 
         event(new GeoDataUpdated());
 

@@ -22,7 +22,7 @@ beforeEach(function () {
 it('has a user page', function () {
     $this->withoutVite();
 
-    $this->user->attachRole('admin');
+    $this->user->addRole('admin');
 
     $response = $this->get(route('user'));
 
@@ -37,7 +37,7 @@ it('shows the team members only if authorized', function () {
     $response = $this->get(route('user'));
     $response->assertForbidden();
 
-    $this->user->attachPermission('user.view');
+    $this->user->givePermission('user.view');
 
     $response = $this->get(route('user'));
 
@@ -54,7 +54,7 @@ it('shows the team members only if authorized', function () {
 //    $user->teams()->attach($this->team);
 //
 //    // Permission for team
-//    $this->user->attachPermission('user.view', $this->team);
+//    $this->user->givePermission('user.view', $this->team);
 //
 //    $response = $this->get(route('user'));
 //
@@ -71,7 +71,7 @@ it('shows the team members only if authorized', function () {
 //    $response->assertSee($this->user->name);
 //
 //    // global Permission
-//    $this->user->attachPermission('user.view');
+//    $this->user->givePermission('user.view');
 //
 //    $response = $this->get(route('user'));
 //
@@ -81,16 +81,16 @@ it('shows the team members only if authorized', function () {
 //});
 
 it('needs authorization to create a user', function () {
-    $this->user->attachRole('admin');
+    $this->user->addRole('admin');
 
     $this->role = Role::find(1);
-    $this->role->detachPermission('user.create');
+    $this->role->removePermission('user.create');
 
     Livewire::test('user')
         ->call('create')
         ->assertForbidden();
 
-    $this->role->attachPermission('user.create');
+    $this->role->givePermission('user.create');
 
     Livewire::test('user')
         ->call('create')
@@ -98,31 +98,31 @@ it('needs authorization to create a user', function () {
 });
 
 it('needs authorization to update a user', function () {
-    $this->user->attachRole('admin');
+    $this->user->addRole('admin');
 
     $this->role = Role::find(1);
-    $this->role->detachPermission('user.update');
+    $this->role->removePermission('user.update');
 
     Livewire::test('user')
         ->call('edit')
         ->assertForbidden();
 
-//    $this->user->detachRole('admin');
-//    $this->user->attachRole('admin', $this->team);
+//    $this->user->removeRole('admin');
+//    $this->user->addRole('admin', $this->team);
 //
 //    Livewire::test('user')
 //        ->call('edit')
 //        ->assertForbidden();
 //
-//    $this->user->attachRole('admin');
-    $this->role->attachPermission('user.update');
+//    $this->user->addRole('admin');
+    $this->role->givePermission('user.update');
 
     Livewire::test('user')
         ->call('edit')
         ->assertSuccessful();
 
-//    $this->user->detachRole('admin');
-//    $this->user->attachRole('admin', $this->team);
+//    $this->user->removeRole('admin');
+//    $this->user->addRole('admin', $this->team);
 //
 //    Livewire::test('user')
 //        ->call('edit')

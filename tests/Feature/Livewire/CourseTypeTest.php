@@ -31,7 +31,7 @@ it('needs permission to create a new course type', function () {
         ->call('create')
         ->assertForbidden();
 
-    $this->user->attachPermission('courseType.create');
+    $this->user->givePermission('courseType.create');
 
     Livewire::test('course-type')
         ->call('create')
@@ -43,7 +43,7 @@ it('needs permission to update a course type', function () {
         ->call('edit')
         ->assertForbidden();
 
-    $this->user->attachPermission('courseType.update');
+    $this->user->givePermission('courseType.update');
 
     Livewire::test('course-type')
         ->call('edit')
@@ -55,19 +55,19 @@ it('needs permission to save a new course type or update', function () {
         ->call('save')
         ->assertForbidden();
 
-    $this->user->attachPermission('courseType.create');
+    $this->user->givePermission('courseType.create');
 
     Livewire::test('course-type')
         ->call('save')
         ->assertSuccessful();
 
-    $this->user->detachPermission('courseType.create');
+    $this->user->removePermission('courseType.create');
 
     Livewire::test('course-type')
         ->call('save')
         ->assertForbidden();
 
-    $this->user->attachPermission('courseType.update');
+    $this->user->givePermission('courseType.update');
 
     Livewire::test('course-type')
         ->call('save')
