@@ -21,7 +21,7 @@
         "guzzlehttp/guzzle": "7.5.0",
         "innoge/laravel-policy-soft-cache": "1.1.1",
         "itsgoingd/clockwork": "5.1.12",
-        "laravel/framework": "10.5.1",
+        "laravel/framework": "10.6.1",
         "laravel/sanctum": "3.2.1",
         "laravel/tinker": "2.8.1",
         "league/csv": "9.9.0",
