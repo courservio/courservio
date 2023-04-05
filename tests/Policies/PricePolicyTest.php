@@ -23,37 +23,37 @@ beforeEach(function () {
 it('has anyView function', function () {
     $this->assertFalse($this->user->can('viewAny', Price::class));
 
-    $this->user->attachPermission('price.create');
+    $this->user->givePermission('price.create');
     $this->assertTrue($this->user->can('viewAny', Price::class));
 
-    $this->user->detachPermission('price.create');
+    $this->user->removePermission('price.create');
     $this->assertFalse($this->user->can('viewAny', Price::class));
 
-    $this->user->attachPermission('price.create', $this->team);
+    $this->user->givePermission('price.create', $this->team);
     $this->assertTrue($this->user->can('viewAny', Price::class));
 
-    $this->user->detachPermission('price.create', $this->team);
+    $this->user->removePermission('price.create', $this->team);
     $this->assertFalse($this->user->can('viewAny', Price::class));
 
-    $this->user->attachPermission('price.update');
+    $this->user->givePermission('price.update');
     $this->assertTrue($this->user->can('viewAny', Price::class));
 
-    $this->user->detachPermission('price.update');
+    $this->user->removePermission('price.update');
     $this->assertFalse($this->user->can('viewAny', Price::class));
 
-    $this->user->attachPermission('price.update', $this->team);
+    $this->user->givePermission('price.update', $this->team);
     $this->assertTrue($this->user->can('viewAny', Price::class));
 });
 
 it('needs permission to create a new price', function () {
     $this->assertFalse($this->user->can('create', Price::class));
 
-    $this->user->attachPermission('price.create');
+    $this->user->givePermission('price.create');
 
     $this->assertTrue($this->user->can('create', Price::class));
 
-    $this->user->detachPermission('price.create');
-    $this->user->attachPermission('price.create', $this->team);
+    $this->user->removePermission('price.create');
+    $this->user->givePermission('price.create', $this->team);
 
     $this->assertTrue($this->user->can('create', Price::class));
 });
@@ -63,14 +63,14 @@ it('needs permission to edit a price', function () {
 
     $this->assertFalse($this->user->can('update', $price));
 
-    $this->user->attachPermission('price.update');
+    $this->user->givePermission('price.update');
 
     $this->assertTrue($this->user->can('update', $price));
 
-    $this->user->detachPermission('price.update');
+    $this->user->removePermission('price.update');
     $this->assertFalse($this->user->can('update', $price));
 
-    $this->user->attachPermission('price.update', $this->team);
+    $this->user->givePermission('price.update', $this->team);
 
     $this->assertTrue($this->user->can('update', $price));
 });

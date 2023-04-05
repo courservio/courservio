@@ -181,6 +181,6 @@ class PermissionSeeder extends Seeder
             'description' => 'User is an administrator', // optional
         ]);
 
-        $admin->attachPermissions(Permission::all());
+        $admin->givePermissions(Permission::all());
     }
 }

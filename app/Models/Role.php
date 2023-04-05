@@ -27,7 +27,7 @@ use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Carbon;
-use Laratrust\Models\LaratrustRole;
+use Laratrust\Models\Role as RoleModel;
 
 /**
  * App\Models\Role
@@ -53,7 +53,7 @@ use Laratrust\Models\LaratrustRole;
  *
  * @mixin Eloquent
  */
-class Role extends LaratrustRole
+class Role extends RoleModel
 {
     public $guarded = [];
 }

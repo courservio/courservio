@@ -17,13 +17,13 @@ beforeEach(function () {
 
     $this->user = User::factory()->create();
 //    $this->user->teams()->attach($this->team);
-//    $this->user->attachRole('admin');
+//    $this->user->addRole('admin');
 
     actingAs($this->user);
 });
 
 it('can render the component', function () {
-    $this->user->attachRole('admin');
+    $this->user->addRole('admin');
 
     $component = Livewire::test(Price::class);
 
@@ -36,14 +36,14 @@ it('has price page which needs to be logged in and authorized', function () {
     $response = $this->get(route('prices'));
     $response->assertForbidden();
 
-    $this->user->attachPermission('price.create');
+    $this->user->givePermission('price.create');
 
     $response = $this->get(route('prices'));
     $response->assertStatus(200);
     $response->assertSeeLivewire('price');
 
-    $this->user->detachPermission('price.create');
-    $this->user->attachPermission('price.update');
+    $this->user->removePermission('price.create');
+    $this->user->givePermission('price.update');
 
     $response = $this->get(route('prices'));
     $response->assertStatus(200);
@@ -59,20 +59,20 @@ it('shows price menu only to authorized users', function () {
 
     $this->get(route('home'))->assertDontSee(_i('Prices'));
 
-    $this->user->attachPermission('price.create');
+    $this->user->givePermission('price.create');
 
     $this->get(route('home'))->assertSee(_i('Prices'));
 });
 
 it('needs authorization to create a price', function () {
-    $this->user->attachPermission('price.create');
+    $this->user->givePermission('price.create');
 
     Livewire::test('price')
         ->call('create')
         ->assertSuccessful();
 
-    $this->user->detachPermission('price.create');
-    $this->user->attachPermission('price.update'); // 'placeholder' to avoid fingerprint error
+    $this->user->removePermission('price.create');
+    $this->user->givePermission('price.update'); // 'placeholder' to avoid fingerprint error
 
     Livewire::test('price')
         ->call('create')

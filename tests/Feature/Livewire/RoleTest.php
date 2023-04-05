@@ -16,7 +16,7 @@ beforeEach(function () {
 
     $this->user = User::factory()->create();
 //    $this->user->teams()->attach($this->team);
-//    $this->user->attachRole('admin');
+//    $this->user->addRole('admin');
 
     actingAs($this->user);
 });
@@ -27,14 +27,14 @@ it('has course type page which needs to be logged in and authorized', function (
     $response = $this->get(route('roles'));
     $response->assertForbidden();
 
-    $this->user->attachPermission('role.create');
+    $this->user->givePermission('role.create');
 
     $response = $this->get(route('roles'));
     $response->assertStatus(200);
     $response->assertSeeLivewire('role');
 
-    $this->user->detachPermission('role.create');
-    $this->user->attachPermission('role.update');
+    $this->user->removePermission('role.create');
+    $this->user->givePermission('role.update');
 
     $response = $this->get(route('roles'));
     $response->assertStatus(200);
@@ -50,20 +50,20 @@ it('shows role menu only to authorized users', function () {
 
     $this->get(route('home'))->assertDontSee(_i('Roles'));
 
-    $this->user->attachPermission('role.create');
+    $this->user->givePermission('role.create');
 
     $this->get(route('home'))->assertSee(_i('Roles'));
 });
 
 it('needs authorization to create a role', function () {
-    $this->user->attachPermission('role.create');
+    $this->user->givePermission('role.create');
 
     Livewire::test('role')
         ->call('create')
         ->assertSuccessful();
 
-    $this->user->detachPermission('role.create');
-    $this->user->attachPermission('role.update'); // 'placeholder' to avoid fingerprint error
+    $this->user->removePermission('role.create');
+    $this->user->givePermission('role.update'); // 'placeholder' to avoid fingerprint error
 
     Livewire::test('role')
         ->call('create')
@@ -71,14 +71,14 @@ it('needs authorization to create a role', function () {
 });
 
 it('needs authorization to edit a role', function () {
-    $this->user->attachPermission('role.update');
+    $this->user->givePermission('role.update');
 
     Livewire::test('role')
         ->call('edit')
         ->assertSuccessful();
 
-    $this->user->detachPermission('role.update');
-    $this->user->attachPermission('role.create'); // 'placeholder' to avoid fingerprint error
+    $this->user->removePermission('role.update');
+    $this->user->givePermission('role.create'); // 'placeholder' to avoid fingerprint error
 
     Livewire::test('role')
         ->call('edit')
