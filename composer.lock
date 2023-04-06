@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b23c66b922bfaba4ebe688a679523f23",
+    "content-hash": "d6ffffeefabcf4c004e87f45a4dc2f70",
     "packages": [
         {
             "name": "brick/math",
@@ -64,16 +64,16 @@
         },
         {
             "name": "codedge/laravel-selfupdater",
-            "version": "3.7.0",
+            "version": "3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codedge/laravel-selfupdater.git",
-                "reference": "dc1ce50dcabd258206d142d65e1c4a2290f32e40"
+                "reference": "a211b11bb1a67539b56e92de3cf16a6b1093cfc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codedge/laravel-selfupdater/zipball/dc1ce50dcabd258206d142d65e1c4a2290f32e40",
-                "reference": "dc1ce50dcabd258206d142d65e1c4a2290f32e40",
+                "url": "https://api.github.com/repos/codedge/laravel-selfupdater/zipball/a211b11bb1a67539b56e92de3cf16a6b1093cfc1",
+                "reference": "a211b11bb1a67539b56e92de3cf16a6b1093cfc1",
                 "shasum": ""
             },
             "require": {
@@ -90,7 +90,7 @@
                 "dg/bypass-finals": "^1.4",
                 "mikey179/vfsstream": "^1.6",
                 "mockery/mockery": "^1.5",
-                "orchestra/testbench": "^8.0",
+                "orchestra/testbench": "^8.1",
                 "phpunit/phpunit": "^9.5.26"
             },
             "type": "library",
@@ -145,7 +145,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-17T20:45:06+00:00"
+            "time": "2023-04-05T09:43:33+00:00"
         },
         {
             "name": "danharrin/livewire-rate-limiting",
