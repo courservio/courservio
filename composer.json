@@ -45,7 +45,7 @@
         "laravel/pint": "1.8.0",
         "laravel/sail": "1.21.4",
         "mockery/mockery": "1.5.1",
-        "nunomaduro/collision": "7.4.0",
+        "nunomaduro/collision": "7.5.0",
         "nunomaduro/larastan": "2.5.1",
         "pestphp/pest-plugin-laravel": "2.0.0",
         "pestphp/pest-plugin-livewire": "2.0.0",
