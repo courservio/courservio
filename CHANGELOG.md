@@ -2,9 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/courservio/courservio/compare/v0.1.6...HEAD)
+## [Unreleased](https://github.com/courservio/courservio/compare/v0.1.7...HEAD)
 
 Please do not update the unreleased notes.
+
+## [v0.1.7](https://github.com/courservio/courservio/compare/v0.1.6...v0.1.7) - 2023-04-15
+
+### Changes
+
+### Dependency Updates
+
+- chore(deps): update dependency nunomaduro/collision to v7.5.0 @renovate (#184)
+- chore(deps): update dependency phpunit/phpunit to v10.1.0 @renovate (#185)
+- fix(deps): update dependency santigarcor/laratrust to v8.1.0 @renovate (#186)
+- fix(deps): update dependency doctrine/dbal to v3.6.2 @renovate (#183)
+- chore(deps): update dependency spatie/laravel-ignition to v2.1.0 @renovate (#182)
+- fix(deps): update dependency laravel/framework to v10.7.1 @renovate (#181)
+- chore(deps): update dependency sass to v1.62.0 @renovate (#180)
+- chore(deps): lock file maintenance @renovate (#179)
+- chore(deps): update dependency sass to v1.61.0 @renovate (#178)
+- fix(deps): update dependency codedge/laravel-selfupdater to v3.8.0 @renovate (#177)
+- fix(deps): update dependency laravel/framework to v10.6.2 @renovate (#176)
+- fix(deps): update dependency innoge/laravel-policy-soft-cache to v1.1.2 @renovate (#175)
+- chore(deps): update dependency deployer/deployer to v7.3.1 @renovate (#174)
+- chore(deps): update dependency axios to v1.3.5 @renovate (#173)
 
 ## [v0.1.6](https://github.com/courservio/courservio/compare/v0.1.5...v0.1.6) - 2023-04-05
 
