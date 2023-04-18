@@ -206,9 +206,9 @@ class Booking extends Component
             ->whereRelation('prices', 'id', '=', Hashids::decode($this->price))
             ->with('type')
             ->with(['prices' => fn ($query) => $query->where('id', '=', Hashids::decode($this->price))])
-                ->whereHas('prices', function (Builder $query) {
-                    $query->where('id', '=', Hashids::decode($this->price));
-                })
+            ->whereHas('prices', function (Builder $query) {
+                $query->where('id', '=', Hashids::decode($this->price));
+            })
             ->withCount(['participants' => fn ($query) => $query->where('cancelled', 0)])
             ->firstOrFail();
 
