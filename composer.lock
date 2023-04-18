@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f90fd232022646a077460885467577b",
+    "content-hash": "0504c00e61d105c9522ea673af3c8870",
     "packages": [
         {
             "name": "brick/math",
@@ -5055,16 +5055,16 @@
         },
         {
             "name": "santigarcor/laratrust",
-            "version": "8.1.0",
+            "version": "8.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/santigarcor/laratrust.git",
-                "reference": "194a8f5755ffa1bb36d38d26f09229f01cca4a9b"
+                "reference": "a7459625cee7d0e2af59335ebbfb716f62096a04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/santigarcor/laratrust/zipball/194a8f5755ffa1bb36d38d26f09229f01cca4a9b",
-                "reference": "194a8f5755ffa1bb36d38d26f09229f01cca4a9b",
+                "url": "https://api.github.com/repos/santigarcor/laratrust/zipball/a7459625cee7d0e2af59335ebbfb716f62096a04",
+                "reference": "a7459625cee7d0e2af59335ebbfb716f62096a04",
                 "shasum": ""
             },
             "require": {
@@ -5118,7 +5118,7 @@
             ],
             "support": {
                 "issues": "https://github.com/santigarcor/laratrust/issues",
-                "source": "https://github.com/santigarcor/laratrust/tree/8.1.0"
+                "source": "https://github.com/santigarcor/laratrust/tree/8.2.0"
             },
             "funding": [
                 {
@@ -5126,7 +5126,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-04-14T15:30:33+00:00"
+            "time": "2023-04-17T14:44:41+00:00"
         },
         {
             "name": "setasign/fpdf",
