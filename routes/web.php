@@ -36,55 +36,55 @@ Route::prefix(LaravelLocalization::setLocale())->middleware('localeSessionRedire
     Route::post('livewire/message/{name}', \Livewire\Controllers\HttpConnectionHandler::class);
 
     Route::get('login', Login::class)
-            ->middleware('guest')
-            ->name('login');
+        ->middleware('guest')
+        ->name('login');
 
     Route::get('home', Home::class)
-            ->name('home');
+        ->name('home');
 
     Route::get('teams', Team::class)
-            ->name('teams');
+        ->name('teams');
 
     Route::get('user', User::class)
-            ->name('user');
+        ->name('user');
 
     Route::get('coursetype', CourseType::class)
-            ->name('coursetype');
+        ->name('coursetype');
 
     Route::get('course', Course::class)
-            ->name('course');
+        ->name('course');
 
     Route::get('participant/{course}', CourseParticipant::class)
-            ->name('participant.course');
+        ->name('participant.course');
 
     Route::get('participant/{participant}/details', ParticipantDetails::class)
-            ->name('participant.details');
+        ->name('participant.details');
 
     Route::get('participant', Participant::class)
-            ->name('participant');
+        ->name('participant');
 
     Route::get('roles', Role::class)
-            ->name('roles');
+        ->name('roles');
 
     Route::get('prices', Price::class)
-            ->name('prices');
+        ->name('prices');
 
     Route::get('positions', Position::class)
-            ->name('positions');
+        ->name('positions');
 
     Route::get('cert-templates', CertTemplate::class)
-            ->name('certTemplates');
+        ->name('certTemplates');
 
     Route::get('course/{slug}', LocationSearch::class);
 
     Route::get('course/{slug}/{location}', BookingOverview::class)
-            ->name('booking.overview');
+        ->name('booking.overview');
 
     Route::get('course/{slug}/{location}/{location2}', BookingOverview::class)
-            ->name('booking.coordinates');
+        ->name('booking.coordinates');
 
     Route::get('booking/{course}/{price}', Booking::class)
-            ->name('booking');
+        ->name('booking');
 }
 );
 

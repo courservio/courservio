@@ -302,7 +302,7 @@ class Course extends Component
                         'H:i',
                         $this->courseDays[$split[1]]['startTime']
                     )
-                    ->gte(Carbon::createFromFormat('H:i', $this->courseDays[$split[1]]['endTime']))
+                        ->gte(Carbon::createFromFormat('H:i', $this->courseDays[$split[1]]['endTime']))
                 ) {
                     $this->courseDays[$split[1]]['startTime'] = Carbon::createFromFormat(
                         'H:i',
@@ -332,10 +332,10 @@ class Course extends Component
                         'H:i',
                         $this->courseDays[$split[1]]['endTime']
                     )
-                    ->lte(Carbon::createFromFormat(
-                        'H:i',
-                        $this->courseDays[$split[1]]['startTime']
-                    ))
+                        ->lte(Carbon::createFromFormat(
+                            'H:i',
+                            $this->courseDays[$split[1]]['startTime']
+                        ))
                 ) {
                     $this->courseDays[$split[1]]['endTime'] = Carbon::createFromFormat(
                         'H:i',
@@ -610,7 +610,7 @@ class Course extends Component
             }
 
             $this->date_range = $this->editing->start
-                    ->format('d.m.y').' '._i('to').' '.$this->editing->end->format('d.m.y');
+                ->format('d.m.y').' '._i('to').' '.$this->editing->end->format('d.m.y');
 
             $this->resetFlatpickr();
             $this->setDayOptions();
