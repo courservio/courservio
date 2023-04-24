@@ -2,9 +2,31 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/courservio/courservio/compare/v0.1.7...HEAD)
+## [Unreleased](https://github.com/courservio/courservio/compare/v0.1.8...HEAD)
 
 Please do not update the unreleased notes.
+
+## [v0.1.8](https://github.com/courservio/courservio/compare/v0.1.7...v0.1.8) - 2023-04-24
+
+### Changes
+
+### Dependency Updates
+
+- chore(deps): update dependency phpunit/phpunit to v10.1.2 @renovate (#201)
+- chore(deps): lock file maintenance @renovate (#202)
+- chore(deps): lock file maintenance @renovate (#199)
+- chore(deps): update dependency vite to v4.3.1 @renovate (#198)
+- chore(deps): update dependency nunomaduro/larastan to v2.6.0 @renovate (#197)
+- chore(deps): update dependency postcss to v8.4.23 @renovate (#196)
+- chore(deps): update dependency axios to v1.3.6 @renovate (#195)
+- chore(deps): update dependency laravel/pint to v1.9.0 @renovate (#193)
+- fix(deps): update dependency laravel/framework to v10.8.0 @renovate (#194)
+- chore(deps): update dependency phpunit/phpunit to v10.1.1 @renovate (#189)
+- chore(deps): update dependency vite to v4.2.2 @renovate (#192)
+- fix(deps): update dependency santigarcor/laratrust to v8.2.0 @renovate (#191)
+- fix(deps): update dependency guzzlehttp/guzzle to v7.5.1 @renovate (#190)
+- chore(deps): update dependency postcss to v8.4.22 @renovate (#188)
+- chore(deps): lock file maintenance @renovate (#187)
 
 ## [v0.1.7](https://github.com/courservio/courservio/compare/v0.1.6...v0.1.7) - 2023-04-15
 
