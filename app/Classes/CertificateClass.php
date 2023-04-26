@@ -99,22 +99,22 @@ class CertificateClass
     public function replacePlaceholders(Participant $participant): void
     {
         // Used for generating a specific selected template (maybe for later use)
-//        // Get the template data
-//        $certData = CertTemplate::whereId($this->certTemplate)
-//            ->with('courseTypes')
-//            ->whereRelation('courseTypes', 'course_type_id', '=', $this->course->course_type_id)
-//            ->first()
-//            ->toArray();
-//
-//        if (! $certData) { // something went wrong / request manipulated
-//            abort(403);
-//        }
-//
-//        $templateProcessor = new TemplateProcessor(
-//            Storage::path('/certTemplates/' . $certData['id'] . '.' . $certData['extension'])
-//        );
+        //        // Get the template data
+        //        $certData = CertTemplate::whereId($this->certTemplate)
+        //            ->with('courseTypes')
+        //            ->whereRelation('courseTypes', 'course_type_id', '=', $this->course->course_type_id)
+        //            ->first()
+        //            ->toArray();
+        //
+        //        if (! $certData) { // something went wrong / request manipulated
+        //            abort(403);
+        //        }
+        //
+        //        $templateProcessor = new TemplateProcessor(
+        //            Storage::path('/certTemplates/' . $certData['id'] . '.' . $certData['extension'])
+        //        );
 
-//        dd($this->certTemplate);
+        //        dd($this->certTemplate);
 
         $templateProcessor = new TemplateProcessor(
             Storage::path('/certTemplates/'.$this->certTemplate)

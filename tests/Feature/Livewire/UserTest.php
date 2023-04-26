@@ -107,24 +107,24 @@ it('needs authorization to update a user', function () {
         ->call('edit')
         ->assertForbidden();
 
-//    $this->user->removeRole('admin');
-//    $this->user->addRole('admin', $this->team);
-//
-//    Livewire::test('user')
-//        ->call('edit')
-//        ->assertForbidden();
-//
-//    $this->user->addRole('admin');
+    //    $this->user->removeRole('admin');
+    //    $this->user->addRole('admin', $this->team);
+    //
+    //    Livewire::test('user')
+    //        ->call('edit')
+    //        ->assertForbidden();
+    //
+    //    $this->user->addRole('admin');
     $this->role->givePermission('user.update');
 
     Livewire::test('user')
         ->call('edit')
         ->assertSuccessful();
 
-//    $this->user->removeRole('admin');
-//    $this->user->addRole('admin', $this->team);
-//
-//    Livewire::test('user')
-//        ->call('edit')
-//        ->assertForbidden();
+    //    $this->user->removeRole('admin');
+    //    $this->user->addRole('admin', $this->team);
+    //
+    //    Livewire::test('user')
+    //        ->call('edit')
+    //        ->assertForbidden();
 });
