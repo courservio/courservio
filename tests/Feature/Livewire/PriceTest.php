@@ -8,16 +8,16 @@ use function Pest\Laravel\actingAs;
 beforeEach(function () {
     $this->seed(PermissionSeeder::class);
 
-//    $this->team = Team::create([
-//        'name' => 'example-team',
-//        'display_name' => 'example team',
-//    ]);
-//
-//    $this->teams = $this->team;
+    //    $this->team = Team::create([
+    //        'name' => 'example-team',
+    //        'display_name' => 'example team',
+    //    ]);
+    //
+    //    $this->teams = $this->team;
 
     $this->user = User::factory()->create();
-//    $this->user->teams()->attach($this->team);
-//    $this->user->addRole('admin');
+    //    $this->user->teams()->attach($this->team);
+    //    $this->user->addRole('admin');
 
     actingAs($this->user);
 });

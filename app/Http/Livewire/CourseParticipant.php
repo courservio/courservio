@@ -257,11 +257,11 @@ class CourseParticipant extends Component
         $batch = Bus::batch([
             $jobBag,
         ])->then(function (Batch $batch) { // success
-        //cleanup after 3 hour
+            //cleanup after 3 hour
             DeleteCerts::dispatch($batch->id)
                 ->delay(now()->addHours(3));
         })->catch(function (Batch $batch, Throwable $e) { // failed
-        // cleanup directly
+            // cleanup directly
             DeleteCerts::dispatch($batch->id)
                 ->delay(now()->addSeconds(30));
         })->dispatch();
@@ -345,11 +345,11 @@ class CourseParticipant extends Component
     public function render()
     {
         // get the available cert templates for the course type - deprecated
-//        $this->course_types = CourseType::whereId($this->course_data->course_type_id)
-//            ->with('certTemplates')
-//            ->first();
+        //        $this->course_types = CourseType::whereId($this->course_data->course_type_id)
+        //            ->with('certTemplates')
+        //            ->first();
 
-//        dd($this->course_types->certTemplates);
+        //        dd($this->course_types->certTemplates);
 
         return view('livewire.course-participant', [
             'companies' => $this->participantsRows->groupBy('company'),
