@@ -191,10 +191,10 @@ class Course extends Component
     }
 
     // TODO check usage
-//    private function setEndOptions(array $end_options): void
-//    {
-//        $this->end_options = array_merge($this->end_options, $end_options);
-//    }
+    //    private function setEndOptions(array $end_options): void
+    //    {
+    //        $this->end_options = array_merge($this->end_options, $end_options);
+    //    }
 
     public function updatedFilters()
     {
@@ -982,7 +982,7 @@ class Course extends Component
         return Auth::user()->teams;
     }
 
-    public function getActualTeamRowsProperty(): TeamModel|null
+    public function getActualTeamRowsProperty(): ?TeamModel
     {
         return TeamModel::query()
             ->where('id', $this->editing->team_id)

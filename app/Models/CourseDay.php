@@ -74,8 +74,8 @@ class CourseDay extends Model
         return $this->hasMany(TrainerDay::class, 'course_day_id');
     }
 
-//    protected $casts = [
-//        'startPlan' => 'datetime:Y-m-d H:i',
-//        'endPlan' => 'datetime:Y-m-d H:i',
-//    ];
+    //    protected $casts = [
+    //        'startPlan' => 'datetime:Y-m-d H:i',
+    //        'endPlan' => 'datetime:Y-m-d H:i',
+    //    ];
 }

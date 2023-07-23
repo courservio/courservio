@@ -70,24 +70,24 @@ class CertTemplate extends Component
         $this->editing = $this->makeBlankModel();
     }
 
-//    public function getRowsQueryProperty(): mixed
-//    {
-//        $query = CertTemplateModel::query();
+    //    public function getRowsQueryProperty(): mixed
+    //    {
+    //        $query = CertTemplateModel::query();
     ////            ->when(
     ////                ! Auth::user()->isAbleTo('team.*'), // can't see all teams
     ////                fn ($query, $user_teams) => $query
     ////                    ->whereIn('team_id', Auth::user()->teams()->pluck('id'))
     ////            );
-//
-//        return $this->applySorting($query);
-//    }
-//
-//    public function getRowsProperty(): mixed
-//    {
-//        return $this->cache(function () {
-//            return $this->applyPagination($this->rowsQuery);
-//        });
-//    }
+    //
+    //        return $this->applySorting($query);
+    //    }
+    //
+    //    public function getRowsProperty(): mixed
+    //    {
+    //        return $this->cache(function () {
+    //            return $this->applyPagination($this->rowsQuery);
+    //        });
+    //    }
 
     public function updatedNewTemplate()
     {
