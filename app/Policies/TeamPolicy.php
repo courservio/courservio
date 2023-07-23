@@ -64,10 +64,10 @@ class TeamPolicy
      * @param  Team  $team
      * @return Response|bool
      */
-//    public function view(User $user, Team $team)
-//    {
-//        //
-//    }
+    //    public function view(User $user, Team $team)
+    //    {
+    //        //
+    //    }
 
     /**
      * Determine whether the user can create models.
@@ -96,10 +96,10 @@ class TeamPolicy
      * @param  Team  $team
      * @return Response|bool
      */
-//    public function delete(User $user, Team $team)
-//    {
-//        //
-//    }
+    //    public function delete(User $user, Team $team)
+    //    {
+    //        //
+    //    }
 
     /**
      * Determine whether the user can restore the model.
@@ -108,10 +108,10 @@ class TeamPolicy
      * @param  Team  $team
      * @return Response|bool
      */
-//    public function restore(User $user, Team $team)
-//    {
-//        //
-//    }
+    //    public function restore(User $user, Team $team)
+    //    {
+    //        //
+    //    }
 
     /**
      * Determine whether the user can permanently delete the model.
@@ -120,8 +120,8 @@ class TeamPolicy
      * @param  Team  $team
      * @return Response|bool
      */
-//    public function forceDelete(User $user, Team $team)
-//    {
-//        //
-//    }
+    //    public function forceDelete(User $user, Team $team)
+    //    {
+    //        //
+    //    }
 }

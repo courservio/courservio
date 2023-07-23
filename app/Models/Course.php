@@ -128,18 +128,18 @@ class Course extends Model
         return $this->hasMany(TrainerDay::class, 'course_id');
     }
 
-//    static public function getFreeSeats(Course $course): int
-//    {
-//        $participants = Participant::whereCourseId( $course->id)->where('cancelled', '=', 0)->count();
-//
-//        return intval($course->seats) - $participants;
-//    }
-//
-//    static public function getFreePercent(Course $course): int
-//    {
-//        $participants = Participant::whereCourseId( $course->id)->where('cancelled', '=', 0)->count();
-//        $freeSeats = intval($course->seats) - $participants;
-//
-//        return $freeSeats / intval($course->seats) * 100;
-//    }
+    //    static public function getFreeSeats(Course $course): int
+    //    {
+    //        $participants = Participant::whereCourseId( $course->id)->where('cancelled', '=', 0)->count();
+    //
+    //        return intval($course->seats) - $participants;
+    //    }
+    //
+    //    static public function getFreePercent(Course $course): int
+    //    {
+    //        $participants = Participant::whereCourseId( $course->id)->where('cancelled', '=', 0)->count();
+    //        $freeSeats = intval($course->seats) - $participants;
+    //
+    //        return $freeSeats / intval($course->seats) * 100;
+    //    }
 }

@@ -50,17 +50,17 @@ class PositionPolicy
         return $user->isAbleTo('position.*');
     }
 
-//    /**
-//     * Determine whether the user can view the model.
-//     *
-//     * @param User $user
-//     * @param Position $position
-//     * @return Response|bool
-//     */
-//    public function view(User $user, Position $position)
-//    {
-//        //
-//    }
+    //    /**
+    //     * Determine whether the user can view the model.
+    //     *
+    //     * @param User $user
+    //     * @param Position $position
+    //     * @return Response|bool
+    //     */
+    //    public function view(User $user, Position $position)
+    //    {
+    //        //
+    //    }
 
     /**
      * Determine whether the user can create models.
@@ -119,39 +119,39 @@ class PositionPolicy
         return false;
     }
 
-//    /**
-//     * Determine whether the user can delete the model.
-//     *
-//     * @param User $user
-//     * @param Position $position
-//     * @return Response|bool
-//     */
-//    public function delete(User $user, Position $position)
-//    {
-//        //
-//    }
+    //    /**
+    //     * Determine whether the user can delete the model.
+    //     *
+    //     * @param User $user
+    //     * @param Position $position
+    //     * @return Response|bool
+    //     */
+    //    public function delete(User $user, Position $position)
+    //    {
+    //        //
+    //    }
 
-//    /**
-//     * Determine whether the user can restore the model.
-//     *
-//     * @param User $user
-//     * @param Position $position
-//     * @return Response|bool
-//     */
-//    public function restore(User $user, Position $position)
-//    {
-//        //
-//    }
+    //    /**
+    //     * Determine whether the user can restore the model.
+    //     *
+    //     * @param User $user
+    //     * @param Position $position
+    //     * @return Response|bool
+    //     */
+    //    public function restore(User $user, Position $position)
+    //    {
+    //        //
+    //    }
 
-//    /**
-//     * Determine whether the user can permanently delete the model.
-//     *
-//     * @param User $user
-//     * @param Position $position
-//     * @return Response|bool
-//     */
-//    public function forceDelete(User $user, Position $position)
-//    {
-//        //
-//    }
+    //    /**
+    //     * Determine whether the user can permanently delete the model.
+    //     *
+    //     * @param User $user
+    //     * @param Position $position
+    //     * @return Response|bool
+    //     */
+    //    public function forceDelete(User $user, Position $position)
+    //    {
+    //        //
+    //    }
 }

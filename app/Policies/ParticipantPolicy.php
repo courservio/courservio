@@ -104,39 +104,39 @@ class ParticipantPolicy
         });
     }
 
-//    /**
-//     * Determine whether the user can delete the model.
-//     *
-//     * @param User $user
-//     * @param Participant $participant
-//     * @return \Illuminate\Auth\Access\Response|bool
-//     */
-//    public function delete(User $user, Participant $participant)
-//    {
-//        //
-//    }
-//
-//    /**
-//     * Determine whether the user can restore the model.
-//     *
-//     * @param User $user
-//     * @param Participant $participant
-//     * @return \Illuminate\Auth\Access\Response|bool
-//     */
-//    public function restore(User $user, Participant $participant)
-//    {
-//        //
-//    }
-//
-//    /**
-//     * Determine whether the user can permanently delete the model.
-//     *
-//     * @param User $user
-//     * @param Participant $participant
-//     * @return \Illuminate\Auth\Access\Response|bool
-//     */
-//    public function forceDelete(User $user, Participant $participant)
-//    {
-//        //
-//    }
+    //    /**
+    //     * Determine whether the user can delete the model.
+    //     *
+    //     * @param User $user
+    //     * @param Participant $participant
+    //     * @return \Illuminate\Auth\Access\Response|bool
+    //     */
+    //    public function delete(User $user, Participant $participant)
+    //    {
+    //        //
+    //    }
+    //
+    //    /**
+    //     * Determine whether the user can restore the model.
+    //     *
+    //     * @param User $user
+    //     * @param Participant $participant
+    //     * @return \Illuminate\Auth\Access\Response|bool
+    //     */
+    //    public function restore(User $user, Participant $participant)
+    //    {
+    //        //
+    //    }
+    //
+    //    /**
+    //     * Determine whether the user can permanently delete the model.
+    //     *
+    //     * @param User $user
+    //     * @param Participant $participant
+    //     * @return \Illuminate\Auth\Access\Response|bool
+    //     */
+    //    public function forceDelete(User $user, Participant $participant)
+    //    {
+    //        //
+    //    }
 }

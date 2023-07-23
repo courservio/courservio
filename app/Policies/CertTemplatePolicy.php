@@ -50,17 +50,17 @@ class CertTemplatePolicy
         return $user->isAbleTo('certTemplate.*');
     }
 
-//    /**
-//     * Determine whether the user can view the model.
-//     *
-//     * @param User $user
-//     * @param CertTemplate $certTemplate
-//     * @return Response|bool
-//     */
-//    public function view(User $user, CertTemplate $certTemplate)
-//    {
-//        //
-//    }
+    //    /**
+    //     * Determine whether the user can view the model.
+    //     *
+    //     * @param User $user
+    //     * @param CertTemplate $certTemplate
+    //     * @return Response|bool
+    //     */
+    //    public function view(User $user, CertTemplate $certTemplate)
+    //    {
+    //        //
+    //    }
 
     /**
      * Determine whether the user can create models.
@@ -110,39 +110,39 @@ class CertTemplatePolicy
         return false;
     }
 
-//    /**
-//     * Determine whether the user can delete the model.
-//     *
-//     * @param User $user
-//     * @param CertTemplate $certTemplate
-//     * @return Response|bool
-//     */
-//    public function delete(User $user, CertTemplate $certTemplate)
-//    {
-//        //
-//    }
-//
-//    /**
-//     * Determine whether the user can restore the model.
-//     *
-//     * @param User $user
-//     * @param CertTemplate $certTemplate
-//     * @return Response|bool
-//     */
-//    public function restore(User $user, CertTemplate $certTemplate)
-//    {
-//        //
-//    }
-//
-//    /**
-//     * Determine whether the user can permanently delete the model.
-//     *
-//     * @param User $user
-//     * @param CertTemplate $certTemplate
-//     * @return Response|bool
-//     */
-//    public function forceDelete(User $user, CertTemplate $certTemplate)
-//    {
-//        //
-//    }
+    //    /**
+    //     * Determine whether the user can delete the model.
+    //     *
+    //     * @param User $user
+    //     * @param CertTemplate $certTemplate
+    //     * @return Response|bool
+    //     */
+    //    public function delete(User $user, CertTemplate $certTemplate)
+    //    {
+    //        //
+    //    }
+    //
+    //    /**
+    //     * Determine whether the user can restore the model.
+    //     *
+    //     * @param User $user
+    //     * @param CertTemplate $certTemplate
+    //     * @return Response|bool
+    //     */
+    //    public function restore(User $user, CertTemplate $certTemplate)
+    //    {
+    //        //
+    //    }
+    //
+    //    /**
+    //     * Determine whether the user can permanently delete the model.
+    //     *
+    //     * @param User $user
+    //     * @param CertTemplate $certTemplate
+    //     * @return Response|bool
+    //     */
+    //    public function forceDelete(User $user, CertTemplate $certTemplate)
+    //    {
+    //        //
+    //    }
 }

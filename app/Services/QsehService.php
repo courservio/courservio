@@ -130,24 +130,24 @@ class QsehService
     }
 
     // function to use (later) for (server) error catching
-//    private function isValidXml($content): bool
-//    {
-//        $content = trim($content);
-//        if (empty($content)) {
-//            return false;
-//        }
-//        //html go to hell!
-//        if (stripos($content, '<!DOCTYPE html>') !== false) {
-//            return false;
-//        }
-//
-//        libxml_use_internal_errors(true);
-//        simplexml_load_string($content);
-//        $errors = libxml_get_errors();
-//        libxml_clear_errors();
-//
-//        return empty($errors);
-//    }
+    //    private function isValidXml($content): bool
+    //    {
+    //        $content = trim($content);
+    //        if (empty($content)) {
+    //            return false;
+    //        }
+    //        //html go to hell!
+    //        if (stripos($content, '<!DOCTYPE html>') !== false) {
+    //            return false;
+    //        }
+    //
+    //        libxml_use_internal_errors(true);
+    //        simplexml_load_string($content);
+    //        $errors = libxml_get_errors();
+    //        libxml_clear_errors();
+    //
+    //        return empty($errors);
+    //    }
 
     private function generate(
         $action,

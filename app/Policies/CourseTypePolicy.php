@@ -39,17 +39,17 @@ class CourseTypePolicy
         return $user->isAbleTo('courseType.*');
     }
 
-//    /**
-//     * Determine whether the user can view the model.
-//     *
-//     * @param  \App\Models\User  $user
-//     * @param  \App\Models\CourseType  $courseType
-//     * @return \Illuminate\Auth\Access\Response|bool
-//     */
-//    public function view(User $user, CourseType $courseType)
-//    {
-//        //
-//    }
+    //    /**
+    //     * Determine whether the user can view the model.
+    //     *
+    //     * @param  \App\Models\User  $user
+    //     * @param  \App\Models\CourseType  $courseType
+    //     * @return \Illuminate\Auth\Access\Response|bool
+    //     */
+    //    public function view(User $user, CourseType $courseType)
+    //    {
+    //        //
+    //    }
 
     /**
      * Determine whether the user can create models.
@@ -75,39 +75,39 @@ class CourseTypePolicy
         return false;
     }
 
-//    /**
-//     * Determine whether the user can delete the model.
-//     *
-//     * @param  \App\Models\User  $user
-//     * @param  \App\Models\CourseType  $courseType
-//     * @return \Illuminate\Auth\Access\Response|bool
-//     */
-//    public function delete(User $user, CourseType $courseType)
-//    {
-//        //
-//    }
-//
-//    /**
-//     * Determine whether the user can restore the model.
-//     *
-//     * @param  \App\Models\User  $user
-//     * @param  \App\Models\CourseType  $courseType
-//     * @return \Illuminate\Auth\Access\Response|bool
-//     */
-//    public function restore(User $user, CourseType $courseType)
-//    {
-//        //
-//    }
-//
-//    /**
-//     * Determine whether the user can permanently delete the model.
-//     *
-//     * @param  \App\Models\User  $user
-//     * @param  \App\Models\CourseType  $courseType
-//     * @return \Illuminate\Auth\Access\Response|bool
-//     */
-//    public function forceDelete(User $user, CourseType $courseType)
-//    {
-//        //
-//    }
+    //    /**
+    //     * Determine whether the user can delete the model.
+    //     *
+    //     * @param  \App\Models\User  $user
+    //     * @param  \App\Models\CourseType  $courseType
+    //     * @return \Illuminate\Auth\Access\Response|bool
+    //     */
+    //    public function delete(User $user, CourseType $courseType)
+    //    {
+    //        //
+    //    }
+    //
+    //    /**
+    //     * Determine whether the user can restore the model.
+    //     *
+    //     * @param  \App\Models\User  $user
+    //     * @param  \App\Models\CourseType  $courseType
+    //     * @return \Illuminate\Auth\Access\Response|bool
+    //     */
+    //    public function restore(User $user, CourseType $courseType)
+    //    {
+    //        //
+    //    }
+    //
+    //    /**
+    //     * Determine whether the user can permanently delete the model.
+    //     *
+    //     * @param  \App\Models\User  $user
+    //     * @param  \App\Models\CourseType  $courseType
+    //     * @return \Illuminate\Auth\Access\Response|bool
+    //     */
+    //    public function forceDelete(User $user, CourseType $courseType)
+    //    {
+    //        //
+    //    }
 }
