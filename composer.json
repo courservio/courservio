@@ -44,7 +44,7 @@
         "fakerphp/faker": "1.23.0",
         "laravel/pint": "1.10.5",
         "laravel/sail": "1.23.1",
-        "mockery/mockery": "1.6.4",
+        "mockery/mockery": "1.6.5",
         "nunomaduro/collision": "7.8.0",
         "nunomaduro/larastan": "2.6.4",
         "pestphp/pest-plugin-laravel": "2.1.0",
