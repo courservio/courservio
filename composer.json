@@ -33,7 +33,7 @@
         "santigarcor/laratrust": "8.2.1",
         "setasign/fpdf": "1.8.6",
         "setasign/fpdi-protection": "2.0.3",
-        "spatie/laravel-ray": "1.32.6",
+        "spatie/laravel-ray": "1.33.0",
         "spatie/laravel-sitemap": "6.3.1",
         "vinkla/hashids": "11.0.0",
         "vyuldashev/xml-to-array": "1.1.0"
