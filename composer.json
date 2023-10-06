@@ -19,7 +19,7 @@
         "danharrin/livewire-rate-limiting": "1.1.0",
         "doctrine/dbal": "3.7.0",
         "guzzlehttp/guzzle": "7.8.0",
-        "innoge/laravel-policy-soft-cache": "1.1.2",
+        "innoge/laravel-policy-soft-cache": "1.2.0",
         "itsgoingd/clockwork": "5.1.12",
         "laravel/framework": "10.26.2",
         "laravel/sanctum": "3.3.1",
