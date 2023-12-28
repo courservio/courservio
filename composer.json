@@ -22,7 +22,7 @@
         "innoge/laravel-policy-soft-cache": "1.2.0",
         "itsgoingd/clockwork": "5.1.12",
         "laravel/framework": "10.33.0",
-        "laravel/sanctum": "3.3.2",
+        "laravel/sanctum": "3.3.3",
         "laravel/tinker": "2.8.2",
         "league/csv": "9.13.0",
         "livewire/livewire": "2.12.6",
