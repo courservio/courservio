@@ -55,10 +55,10 @@ use Vinkla\Hashids\Facades\Hashids;
  */
 class Course extends Component
 {
+    use AuthorizesRequests;
+    use WithCachedRows;
     use WithPerPagePagination;
     use WithSorting;
-    use WithCachedRows;
-    use AuthorizesRequests;
 
     protected $queryString = ['sorts'];
 

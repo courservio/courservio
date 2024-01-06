@@ -98,9 +98,9 @@ use Vinkla\Hashids\Facades\Hashids;
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasRolesAndPermissions;
     use HasApiTokens;
     use HasFactory;
+    use HasRolesAndPermissions;
     use Notifiable;
 
     /**

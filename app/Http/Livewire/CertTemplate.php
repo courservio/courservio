@@ -38,10 +38,10 @@ use ZipArchive;
 class CertTemplate extends Component
 {
     use AuthorizesRequests;
+    use WithCachedRows;
     use WithFileUploads;
     use WithPerPagePagination;
     use WithSorting;
-    use WithCachedRows;
 
     public CertTemplateModel $editing;
 
