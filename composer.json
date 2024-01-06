@@ -42,7 +42,7 @@
         "barryvdh/laravel-ide-helper": "2.13.0",
         "deployer/deployer": "7.3.3",
         "fakerphp/faker": "1.23.1",
-        "laravel/pint": "1.10.6",
+        "laravel/pint": "1.13.7",
         "laravel/sail": "1.26.3",
         "mockery/mockery": "1.6.7",
         "nunomaduro/collision": "7.10.0",
