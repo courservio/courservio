@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c7c2531cb60425b1f103ef026426d48",
+    "content-hash": "26290dc80b8336bdfd0aff5c8431c100",
     "packages": [
         {
             "name": "brick/math",
@@ -63,16 +63,16 @@
         },
         {
             "name": "codedge/laravel-selfupdater",
-            "version": "3.8.0",
+            "version": "3.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codedge/laravel-selfupdater.git",
-                "reference": "a211b11bb1a67539b56e92de3cf16a6b1093cfc1"
+                "reference": "a5dac8fd383fdedb125c8a59e136f3d1e775be88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codedge/laravel-selfupdater/zipball/a211b11bb1a67539b56e92de3cf16a6b1093cfc1",
-                "reference": "a211b11bb1a67539b56e92de3cf16a6b1093cfc1",
+                "url": "https://api.github.com/repos/codedge/laravel-selfupdater/zipball/a5dac8fd383fdedb125c8a59e136f3d1e775be88",
+                "reference": "a5dac8fd383fdedb125c8a59e136f3d1e775be88",
                 "shasum": ""
             },
             "require": {
@@ -144,7 +144,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-04-05T09:43:33+00:00"
+            "time": "2024-01-29T09:26:35+00:00"
         },
         {
             "name": "danharrin/livewire-rate-limiting",
@@ -4210,16 +4210,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.55",
+            "version": "1.10.57",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "9a88f9d18ddf4cf54c922fbeac16c4cb164c5949"
+                "reference": "1627b1d03446904aaa77593f370c5201d2ecc34e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/9a88f9d18ddf4cf54c922fbeac16c4cb164c5949",
-                "reference": "9a88f9d18ddf4cf54c922fbeac16c4cb164c5949",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/1627b1d03446904aaa77593f370c5201d2ecc34e",
+                "reference": "1627b1d03446904aaa77593f370c5201d2ecc34e",
                 "shasum": ""
             },
             "require": {
@@ -4268,7 +4268,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-08T12:32:40+00:00"
+            "time": "2024-01-24T11:51:34+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
