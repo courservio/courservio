@@ -43,7 +43,7 @@
         "deployer/deployer": "7.3.3",
         "fakerphp/faker": "1.23.1",
         "laravel/pint": "1.10.6",
-        "laravel/sail": "1.28.2",
+        "laravel/sail": "1.29.0",
         "mockery/mockery": "1.6.9",
         "nunomaduro/collision": "7.10.0",
         "nunomaduro/larastan": "2.9.2",
