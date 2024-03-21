@@ -25,7 +25,7 @@
         "axios": "1.6.8",
         "livewire-turbolinks": "0.1.4",
         "lodash": "4.17.21",
-        "postcss": "8.4.37",
+        "postcss": "8.4.38",
         "postcss-import": "16.0.1",
         "resolve-url-loader": "5.0.0",
         "sass": "1.72.0",
