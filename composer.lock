@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "948aa2291a9a0d2e38d919ed7b25d805",
+    "content-hash": "5fbb7877a38df910d755dc2d8076885d",
     "packages": [
         {
             "name": "brick/math",
@@ -1594,16 +1594,16 @@
         },
         {
             "name": "innoge/laravel-policy-soft-cache",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/InnoGE/laravel-policy-soft-cache.git",
-                "reference": "68a4b6c6778700bd29ec4c64b903e750075260da"
+                "reference": "62160a74ee4ea704159cbd1e780240a5c34efaf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/InnoGE/laravel-policy-soft-cache/zipball/68a4b6c6778700bd29ec4c64b903e750075260da",
-                "reference": "68a4b6c6778700bd29ec4c64b903e750075260da",
+                "url": "https://api.github.com/repos/InnoGE/laravel-policy-soft-cache/zipball/62160a74ee4ea704159cbd1e780240a5c34efaf2",
+                "reference": "62160a74ee4ea704159cbd1e780240a5c34efaf2",
                 "shasum": ""
             },
             "require": {
@@ -1656,9 +1656,9 @@
             ],
             "support": {
                 "issues": "https://github.com/InnoGE/laravel-policy-soft-cache/issues",
-                "source": "https://github.com/InnoGE/laravel-policy-soft-cache/tree/1.3.0"
+                "source": "https://github.com/InnoGE/laravel-policy-soft-cache/tree/1.4.0"
             },
-            "time": "2024-02-25T10:48:41+00:00"
+            "time": "2024-04-17T11:27:52+00:00"
         },
         {
             "name": "intervention/image",
@@ -5794,16 +5794,16 @@
         },
         {
             "name": "spatie/laravel-package-tools",
-            "version": "1.16.2",
+            "version": "1.16.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-package-tools.git",
-                "reference": "e62eeb1fe8a8a0b2e83227a6c279c8c59f7d3a15"
+                "reference": "ddf678e78d7f8b17e5cdd99c0c3413a4a6592e53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/e62eeb1fe8a8a0b2e83227a6c279c8c59f7d3a15",
-                "reference": "e62eeb1fe8a8a0b2e83227a6c279c8c59f7d3a15",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/ddf678e78d7f8b17e5cdd99c0c3413a4a6592e53",
+                "reference": "ddf678e78d7f8b17e5cdd99c0c3413a4a6592e53",
                 "shasum": ""
             },
             "require": {
@@ -5842,7 +5842,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-package-tools/issues",
-                "source": "https://github.com/spatie/laravel-package-tools/tree/1.16.2"
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.16.4"
             },
             "funding": [
                 {
@@ -5850,7 +5850,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-11T08:43:00+00:00"
+            "time": "2024-03-20T07:29:11+00:00"
         },
         {
             "name": "spatie/laravel-ray",
