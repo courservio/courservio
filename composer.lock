@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "95f329c51770998bd9101a870a3558bf",
+    "content-hash": "bbc49cb4ea05b7c9b33892596bb7d062",
     "packages": [
         {
             "name": "brick/math",
@@ -63,16 +63,16 @@
         },
         {
             "name": "codedge/laravel-selfupdater",
-            "version": "3.8.2",
+            "version": "3.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codedge/laravel-selfupdater.git",
-                "reference": "b765bd1122aec51f324eca5487161c559dca53f8"
+                "reference": "3b1c6ad6582c5cb5bfb24d29a2990c34a2435fd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codedge/laravel-selfupdater/zipball/b765bd1122aec51f324eca5487161c559dca53f8",
-                "reference": "b765bd1122aec51f324eca5487161c559dca53f8",
+                "url": "https://api.github.com/repos/codedge/laravel-selfupdater/zipball/3b1c6ad6582c5cb5bfb24d29a2990c34a2435fd1",
+                "reference": "3b1c6ad6582c5cb5bfb24d29a2990c34a2435fd1",
                 "shasum": ""
             },
             "require": {
@@ -144,7 +144,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-03T21:35:06+00:00"
+            "time": "2024-06-28T13:29:29+00:00"
         },
         {
             "name": "danharrin/livewire-rate-limiting",
@@ -4175,16 +4175,16 @@
         },
         {
             "name": "phpstan/extension-installer",
-            "version": "1.3.1",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/extension-installer.git",
-                "reference": "f45734bfb9984c6c56c4486b71230355f066a58a"
+                "reference": "f6b87faf9fc7978eab2f7919a8760bc9f58f9203"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/f45734bfb9984c6c56c4486b71230355f066a58a",
-                "reference": "f45734bfb9984c6c56c4486b71230355f066a58a",
+                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/f6b87faf9fc7978eab2f7919a8760bc9f58f9203",
+                "reference": "f6b87faf9fc7978eab2f7919a8760bc9f58f9203",
                 "shasum": ""
             },
             "require": {
@@ -4213,22 +4213,22 @@
             "description": "Composer plugin for automatic installation of PHPStan extensions",
             "support": {
                 "issues": "https://github.com/phpstan/extension-installer/issues",
-                "source": "https://github.com/phpstan/extension-installer/tree/1.3.1"
+                "source": "https://github.com/phpstan/extension-installer/tree/1.4.1"
             },
-            "time": "2023-05-24T08:59:17+00:00"
+            "time": "2024-06-10T08:20:49+00:00"
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.11.2",
+            "version": "1.11.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "0d5d4294a70deb7547db655c47685d680e39cfec"
+                "reference": "490f0ae1c92b082f154681d7849aee776a7c1443"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/0d5d4294a70deb7547db655c47685d680e39cfec",
-                "reference": "0d5d4294a70deb7547db655c47685d680e39cfec",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/490f0ae1c92b082f154681d7849aee776a7c1443",
+                "reference": "490f0ae1c92b082f154681d7849aee776a7c1443",
                 "shasum": ""
             },
             "require": {
@@ -4273,25 +4273,25 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-05-24T13:23:04+00:00"
+            "time": "2024-06-17T15:10:54+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
-            "version": "1.3.16",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-phpunit.git",
-                "reference": "d5242a59d035e46774f2e634b374bc39ff62cb95"
+                "reference": "f3ea021866f4263f07ca3636bf22c64be9610c11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-phpunit/zipball/d5242a59d035e46774f2e634b374bc39ff62cb95",
-                "reference": "d5242a59d035e46774f2e634b374bc39ff62cb95",
+                "url": "https://api.github.com/repos/phpstan/phpstan-phpunit/zipball/f3ea021866f4263f07ca3636bf22c64be9610c11",
+                "reference": "f3ea021866f4263f07ca3636bf22c64be9610c11",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0",
-                "phpstan/phpstan": "^1.10"
+                "phpstan/phpstan": "^1.11"
             },
             "conflict": {
                 "phpunit/phpunit": "<7.0"
@@ -4323,9 +4323,9 @@
             "description": "PHPUnit extensions and rules for PHPStan",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-phpunit/issues",
-                "source": "https://github.com/phpstan/phpstan-phpunit/tree/1.3.16"
+                "source": "https://github.com/phpstan/phpstan-phpunit/tree/1.4.0"
             },
-            "time": "2024-02-23T09:51:20+00:00"
+            "time": "2024-04-20T06:39:00+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -4711,20 +4711,20 @@
         },
         {
             "name": "psr/http-factory",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-factory.git",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35"
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/e616d01114759c4c489f93b099585439f795fe35",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0.0",
+                "php": ">=7.1",
                 "psr/http-message": "^1.0 || ^2.0"
             },
             "type": "library",
@@ -4748,7 +4748,7 @@
                     "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "Common interfaces for PSR-7 HTTP message factories",
+            "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
             "keywords": [
                 "factory",
                 "http",
@@ -4760,9 +4760,9 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-factory/tree/1.0.2"
+                "source": "https://github.com/php-fig/http-factory"
             },
-            "time": "2023-04-10T20:10:41+00:00"
+            "time": "2024-04-15T12:06:14+00:00"
         },
         {
             "name": "psr/http-message",
