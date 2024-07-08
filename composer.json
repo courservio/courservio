@@ -32,7 +32,7 @@
         "prevplan/laravel-heartbeat-status": "1.0.1",
         "santigarcor/laratrust": "8.3.1",
         "setasign/fpdf": "1.8.6",
-        "setasign/fpdi-protection": "2.0.3",
+        "setasign/fpdi-protection": "2.1.0",
         "spatie/laravel-ray": "1.33.1",
         "spatie/laravel-sitemap": "6.4.0",
         "vinkla/hashids": "11.0.0",
