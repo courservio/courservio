@@ -18,7 +18,7 @@
         "codedge/laravel-selfupdater": "3.9.0",
         "danharrin/livewire-rate-limiting": "1.3.1",
         "doctrine/dbal": "3.8.6",
-        "guzzlehttp/guzzle": "7.9.0",
+        "guzzlehttp/guzzle": "7.9.1",
         "innoge/laravel-policy-soft-cache": "1.4.0",
         "itsgoingd/clockwork": "5.2.2",
         "laravel/framework": "10.33.0",
