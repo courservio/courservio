@@ -23,7 +23,7 @@
         "itsgoingd/clockwork": "5.2.2",
         "laravel/framework": "10.48.22",
         "laravel/sanctum": "3.3.3",
-        "laravel/tinker": "2.8.2",
+        "laravel/tinker": "2.10.0",
         "league/csv": "9.17.0",
         "livewire/livewire": "2.12.8",
         "mcamara/laravel-localization": "V1.8.0",
